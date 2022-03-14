@@ -199,7 +199,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-oak-institute-theme",
-                "reference": "b2046c22d8a60bd98dab3d732178da466b8b630d"
+                "reference": "4495f292e1e08fb19efc5ef8cc0a61ee07421649"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -240,7 +240,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2022-03-11T15:06:31+00:00"
+            "time": "2022-03-14T19:44:49+00:00"
         },
         {
             "name": "composer/installers",
