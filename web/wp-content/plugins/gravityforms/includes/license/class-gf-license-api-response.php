@@ -221,10 +221,6 @@ class GF_License_API_Response extends GF_API_Response {
 					'class' => 'product',
 				);
 			default:
-				if ( ! $this->has_expiration() ) {
-					return __( 'N/A', 'gravityforms' );
-				}
-
 				return $this->get_data_value( 'days_to_expire' );
 		}
 	}
@@ -283,7 +279,16 @@ class GF_License_API_Response extends GF_API_Response {
 	 * @return bool
 	 */
 	public function has_expiration() {
-		return ( ! $this->get_data_value( 'is_perpetual' ) && ( $this->get_data_value( 'renewal_date' ) || $this->get_data_value( 'date_expires' ) ) );
+		$expiration = $this->get_data_value( 'date_expires' );
+
+		if ( empty( $expiration ) ) {
+			return false;
+		}
+
+		$y = (int) gmdate( 'Y', strtotime( $expiration ) );
+
+		// 2038 is the latest timestamp we ever assign to a license; if it's present, this key doesn't expire.
+		return $y < 2038;
 	}
 
 	/**
@@ -294,38 +299,17 @@ class GF_License_API_Response extends GF_API_Response {
 	 * @return string
 	 */
 	public function renewal_text() {
-		if ( $this->get_status() === GF_License_Statuses::EXPIRED_LICENSE_KEY ) {
+		if (  $this->get_status() === GF_License_Statuses::EXPIRED_LICENSE_KEY ) {
 			return __( 'Expired On', 'gravityforms' );
 		}
 
-		$has_subscription = (bool) $this->get_data_value( 'renewal_date' );
-		$cancelled        = (bool) $this->get_data_value( 'is_subscription_canceled' );
+		$cancelled = $this->get_data_value( 'is_subscription_canceled' );
 
-		if ( $has_subscription && ! $cancelled ) {
-			return __( 'Renews On', 'gravityforms' );
+		if ( ! $this->has_expiration() || $cancelled ) {
+			return __( 'Expires On', 'gravityforms' );
 		}
 
-		return __( 'Expires On', 'gravityforms' );
-	}
-
-	/**
-	 * Returns the license renewal or expiry date or the doesn't expire message.
-	 *
-	 * @since 2.6.2
-	 *
-	 * @return string|void
-	 */
-	public function renewal_date() {
-		if ( ! $this->has_expiration() ) {
-			return __( 'Does not expire', 'gravityforms' );
-		}
-
-		$date = $this->get_data_value( 'renewal_date' );
-		if ( empty( $date ) ) {
-			$date = $this->get_data_value( 'date_expires' );
-		}
-
-		return gmdate( 'M d, Y', strtotime( $date ) );
+		return __( 'Renews On', 'gravityforms' );
 	}
 
 	/**
@@ -344,37 +328,39 @@ class GF_License_API_Response extends GF_API_Response {
 	//----------------------------------------
 
 	/**
-	 * Prepares the object for serializing.
+	 * Custom serialization method for this response type.
 	 *
-	 * @since 2.6.2
+	 * @since 2.5.11
 	 *
-	 * @return array
+	 * @return string
 	 */
-	public function __serialize() {
-		return array(
-			'data'   => $this->data,
-			'errors' => $this->errors,
-			'status' => $this->status,
-			'meta'   => $this->meta,
-			'strat'  => $this->transient_strategy,
+	public function serialize() {
+		return serialize(
+			array(
+				'data'   => $this->data,
+				'errors' => $this->errors,
+				'status' => $this->status,
+				'meta'   => $this->meta,
+				'strat'  => $this->transient_strategy,
+			)
 		);
 	}
 
 	/**
-	 * Hydrates the object when unserializing.
+	 * Custom unserialization method for this response type.
 	 *
-	 * @since 2.6.2
+	 * @since 2.5.11
 	 *
-	 * @param array $data The unserialized data.
-	 *
-	 * @return void
+	 * @param string $serialized
 	 */
-	public function __unserialize( $data ) {
-		$this->data               = $data['data'];
-		$this->errors             = $data['errors'];
-		$this->status             = $data['status'];
-		$this->meta               = $data['meta'];
-		$this->transient_strategy = $data['strat'];
+	public function unserialize( $serialized ) {
+		$parsed = unserialize( $serialized );
+
+		$this->data               = $parsed['data'];
+		$this->errors             = $parsed['errors'];
+		$this->status             = $parsed['status'];
+		$this->meta               = $parsed['meta'];
+		$this->transient_strategy = $parsed['strat'];
 	}
 
 }

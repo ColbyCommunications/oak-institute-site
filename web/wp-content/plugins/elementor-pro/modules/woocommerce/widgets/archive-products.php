@@ -171,8 +171,4 @@ class Archive_Products extends Products {
 
 		$this->end_controls_section();
 	}
-
-	public function get_group_name() {
-		return 'woocommerce';
-	}
 }

@@ -32,7 +32,7 @@ class Cart extends Base_Widget {
 	}
 
 	public function get_categories() {
-		return [ 'woocommerce-elements' ];
+		return [ 'theme-elements', 'woocommerce-elements' ];
 	}
 
 	public function get_script_depends() {
@@ -2318,9 +2318,5 @@ class Cart extends Base_Widget {
 		remove_action( 'woocommerce_cart_contents', [ $this, 'disable_cart_coupon' ] );
 		remove_action( 'woocommerce_after_cart_contents', [ $this, 'enable_cart_coupon' ] );
 		add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-	}
-
-	public function get_group_name() {
-		return 'woocommerce';
 	}
 }

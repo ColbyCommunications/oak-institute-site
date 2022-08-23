@@ -597,7 +597,7 @@ class Share_Buttons extends Base_Widget {
 				$social_network_class = ' elementor-share-btn_' . $network_name;
 				?>
 					<div class="elementor-grid-item">
-						<div class="<?php echo esc_attr( $button_classes . $social_network_class ); ?>" tabindex="0">
+						<div class="<?php echo esc_attr( $button_classes . $social_network_class ); ?>">
 							<?php if ( 'icon' === $settings['view'] || 'icon-text' === $settings['view'] ) : ?>
 								<span class="elementor-share-btn__icon">
 								<?php self::render_share_icon( $network_name ); ?>
@@ -654,7 +654,7 @@ class Share_Buttons extends Base_Widget {
 						socialNetworkClass = 'elementor-share-btn_' + networkName;
 					#>
 					<div class="elementor-grid-item">
-						<div class="{{ buttonClass }} {{ socialNetworkClass }}" tabindex="0">
+						<div class="{{ buttonClass }} {{ socialNetworkClass }}">
 							<# if ( 'icon' === settings.view || 'icon-text' === settings.view ) { #>
 							<span class="elementor-share-btn__icon">
 								<i class="{{ shareButtonsEditorModule.getNetworkClass( networkName ) }}" aria-hidden="true"></i>

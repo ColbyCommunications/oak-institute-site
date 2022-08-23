@@ -920,9 +920,6 @@ class Jet_Elements_Images_Layout extends Jet_Elements_Base {
 
 		$settings = array(
 			'layoutType'    => $module_settings['layout_type'],
-			// 'columns'       => $module_settings['columns'],
-			// 'columnsTablet' => $module_settings['columns_tablet'],
-			// 'columnsMobile' => $module_settings['columns_mobile'],
 			'justifyHeight' => $module_settings['justify_height'],
 		);
 

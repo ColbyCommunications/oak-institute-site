@@ -8,6 +8,10 @@
 	.slider-pro {
 		visibility: hidden;
 
+		.elementor-section.elementor-invisible & {
+			visibility: hidden;
+		}
+
 		&.slider-loaded {
 			visibility: visible;
 		}

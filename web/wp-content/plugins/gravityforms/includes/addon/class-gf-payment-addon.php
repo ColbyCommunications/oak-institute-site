@@ -13,9 +13,6 @@ if ( ! class_exists( 'GFForms' ) ) {
 // Require GFFeedAddOn.
 require_once( 'class-gf-feed-addon.php' );
 
-use \Gravity_Forms\Gravity_Forms\Orders\Factories\GF_Order_Factory;
-use \Gravity_Forms\Gravity_Forms\Orders\Exporters\GF_Save_Entry_Order_Exporter;
-
 /**
  * Class GFPaymentAddOn
  *
@@ -958,13 +955,6 @@ abstract class GFPaymentAddOn extends GFFeedAddOn {
 
 		}
 
-		$order = GF_Order_Factory::create_from_feed( $feed, $form, $entry, $this->current_submission_data, $this );
-		gform_add_meta(
-			$entry['id'],
-			'gform_order',
-			( new GF_Save_Entry_Order_Exporter( $order ) )->export()
-		);
-
 		return $entry;
 	}
 
@@ -1074,6 +1064,7 @@ abstract class GFPaymentAddOn extends GFFeedAddOn {
 
 		// Updating subscription information.
 		if ( $subscription['is_success'] ) {
+
 			$entry = $this->start_subscription( $entry, $subscription );
 
 		} else {

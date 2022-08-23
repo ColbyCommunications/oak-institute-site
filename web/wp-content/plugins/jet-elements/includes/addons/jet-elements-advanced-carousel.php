@@ -317,6 +317,19 @@ class Jet_Elements_Advanced_Carousel extends Jet_Elements_Base {
 			)
 		);
 
+		$this->add_control(
+			'hide_items_without_image',
+			array(
+				'label'        => esc_html__( 'Hide Slides Without Images', 'jet-elements' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Yes', 'jet-elements' ),
+				'label_off'    => esc_html__( 'No', 'jet-elements' ),
+				'return_value' => 'true',
+				'default'      => '',
+				'render_type'  => 'template',
+			)
+		);
+
 		$this->add_responsive_control(
 			'slides_to_show',
 			array(
@@ -1192,12 +1205,8 @@ class Jet_Elements_Advanced_Carousel extends Jet_Elements_Base {
 			array(
 				'label' => esc_html__( 'Background Color', 'jet-elements' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['items_button'] => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['items_button'] => 'background-image: linear-gradient(180deg, {{VALUE}} 0%, {{VALUE}} 100%); background-color: {{VALUE}}',
 				),
 			),
 			25
@@ -1251,7 +1260,7 @@ class Jet_Elements_Advanced_Carousel extends Jet_Elements_Base {
 				'label'     => esc_html__( 'Background Color', 'jet-elements' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['items_button'] . ':hover' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['items_button'] . ':hover' => 'background-image: linear-gradient(180deg, {{VALUE}} 0%, {{VALUE}} 100%); background-color: {{VALUE}};',
 				),
 			),
 			25

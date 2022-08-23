@@ -941,7 +941,6 @@ class Jet_Elements_Table extends Jet_Elements_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					//'{{WRAPPER}} ' . $css_scheme['table'] => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} ' . $css_scheme['table_head_row'] . ':first-child ' . $css_scheme['table_cell'] . ':first-child' => ! is_rtl() ? 'border-top-left-radius: {{TOP}}{{UNIT}};' : 'border-top-right-radius: {{RIGHT}}{{UNIT}};',
 					'{{WRAPPER}} ' . $css_scheme['table_head_row'] . ':first-child ' . $css_scheme['table_cell'] . ':last-child' => ! is_rtl() ? 'border-top-right-radius: {{RIGHT}}{{UNIT}};' : 'border-top-left-radius: {{TOP}}{{UNIT}};',
 					'{{WRAPPER}} ' . $css_scheme['table_body_row'] . ':last-child ' . $css_scheme['table_cell'] . ':last-child' => ! is_rtl() ? 'border-bottom-right-radius: {{BOTTOM}}{{UNIT}};' : 'border-bottom-left-radius: {{LEFT}}{{UNIT}};',

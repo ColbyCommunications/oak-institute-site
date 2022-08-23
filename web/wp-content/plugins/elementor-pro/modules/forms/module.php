@@ -1,7 +1,6 @@
 <?php
 namespace ElementorPro\Modules\Forms;
 
-use Elementor\Controls_Manager;
 use ElementorPro\Modules\Forms\Data\Controller;
 use Elementor\Core\Experiments\Manager;
 use Elementor\Core\Common\Modules\Ajax\Module as Ajax;
@@ -41,13 +40,14 @@ class Module extends Module_Base {
 		];
 	}
 
-	/**
-	 * @deprecated 3.1.0
-	 */
-	public function localize_settings() {
-		Plugin::elementor()->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function( __METHOD__, '3.1.0' );
+	public function localize_settings( $settings ) {
+		$settings = array_replace_recursive( $settings, [
+			'i18n' => [
+				'x_field' => esc_html__( '%s Field', 'elementor-pro' ),
+			],
+		] );
 
-		return [];
+		return $settings;
 	}
 
 	public static function find_element_recursive( $elements, $form_id ) {
@@ -68,9 +68,11 @@ class Module extends Module_Base {
 		return false;
 	}
 
-	public function register_controls( Controls_Manager $controls_manager ) {
-		$controls_manager->register( new Fields_Repeater() );
-		$controls_manager->register( new Fields_Map() );
+	public function register_controls() {
+		$controls_manager = Plugin::elementor()->controls_manager;
+
+		$controls_manager->register_control( Fields_Repeater::CONTROL_TYPE, new Fields_Repeater() );
+		$controls_manager->register_control( Fields_Map::CONTROL_TYPE, new Fields_Map() );
 	}
 
 	/**
@@ -165,7 +167,8 @@ class Module extends Module_Base {
 	public function __construct() {
 		parent::__construct();
 
-		add_action( 'elementor/controls/register', [ $this, 'register_controls' ] );
+		add_filter( 'elementor_pro/editor/localize_settings', [ $this, 'localize_settings' ] );
+		add_action( 'elementor/controls/controls_registered', [ $this, 'register_controls' ] );
 		add_action( 'elementor/ajax/register_actions', [ $this, 'register_ajax_actions' ] );
 
 		$this->add_component( 'recaptcha', new Classes\Recaptcha_Handler() );

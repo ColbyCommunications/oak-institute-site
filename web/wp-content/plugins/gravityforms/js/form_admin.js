@@ -14,6 +14,8 @@ jQuery(document).ready(function($){
         SetRuleValueDropDown($(this));
     });
 
+	initMergeTagSupport();
+
 	// For backwards compat.
 	if( window.form ) {
 		window.gfMergeTags = new gfMergeTagsObj( form );
@@ -93,16 +95,12 @@ function GetConditionalObject(objectType){
         object = current_notification;
         break;
 
-    case "button":
-        object = form.button;
-        break;
-
     default:
         object = typeof form != 'undefined' ? form.button : false;
         break;
     }
 
-    object = gform.applyFilters( 'gform_conditional_object', object, objectType );
+    object = gform.applyFilters( 'gform_conditional_object', object, objectType )
 
     return object;
 }
@@ -143,6 +141,12 @@ function CreateConditionalLogic(objectType, obj){
     }
 
     var descPieces = {};
+    if( objectType == "form_button" ) {
+        descPieces.a11yWarning = "<div class='gform-alert gform-alert--accessibility'>";
+        descPieces.a11yWarning += "<span class='gform-alert__icon gform-icon gform-icon--accessibility' aria-hidden='true'></span>";
+        descPieces.a11yWarning += "<div class='gform-alert__message-wrap'><p class='gform-alert__message'>" + gf_vars.conditional_logic_a11y + "</p></div>";
+        descPieces.a11yWarning += "</div>";
+    }
     descPieces.actionType = "<select id='" + objectType + "_action_type' onchange='SetConditionalProperty(\"" + objectType + "\", \"actionType\", jQuery(this).val());'><option value='show' " + showSelected + ">" + showText + "</option><option value='hide' " + hideSelected + ">" + hideText + "</option></select>";
     descPieces.objectDescription = objText;
     descPieces.logicType = "<select id='" + objectType + "_logic_type' onchange='SetConditionalProperty(\"" + objectType + "\", \"logicType\", jQuery(this).val());'><option value='all' " + allSelected + ">" + gf_vars.all + "</option><option value='any' " + anySelected + ">" + gf_vars.any + "</option></select>";
@@ -503,19 +507,12 @@ function SetRuleProperty(objectType, ruleIndex, name, value){
 }
 
 function GetFieldById( id ) {
-    if ( 'submit' === id ) {
-        return GetSubmitField();
-    }
     id = parseInt( id );
     for(var i=0; i<form.fields.length; i++){
         if(form.fields[i].id == id)
             return form.fields[i];
     }
     return null;
-}
-
-function GetSubmitField() {
-    return { type: "submit", cssClass: "" };
 }
 
 function SetConditionalProperty(objectType, name, value){
@@ -641,23 +638,6 @@ function HasPostField(){
             return true;
     }
     return false;
-}
-
-/**
- * Determines whether the current form has a page field.
- *
- * @since 2.6
- *
- * @returns {bool}
- */
-function HasPageField(){
-
-	for(var i=0; i<form.fields.length; i++){
-		var type = form.fields[i].type;
-		if(type == "page")
-			return true;
-	}
-	return false;
 }
 
 function GetInput(field, id){
@@ -963,9 +943,7 @@ var gfMergeTagsObj = function( form, element ) {
 
 		self.addMergeTagIcon();
 
-		self.mergeTagIcon.find( '.open-list' ).on( 'click.gravityforms', function(e) {
-
-		    e.preventDefault();
+		self.mergeTagIcon.find( 'a.open-list' ).on( 'click.gravityforms', function() {
 
 			var trigger = jQuery(this);
 
@@ -1025,6 +1003,7 @@ var gfMergeTagsObj = function( form, element ) {
 	self.bindKeyDown = function() {
 
 		self.elem.on( 'keydown.gravityforms', function( event ) {
+
 			var menuActive = self.elem.data( 'autocomplete' ) && self.elem.data( 'autocomplete' ).menu ? self.elem.data( 'autocomplete' ).menu.active : false;
 
 			if ( event.keyCode === jQuery.ui.keyCode.TAB && menuActive ) {
@@ -1086,14 +1065,14 @@ var gfMergeTagsObj = function( form, element ) {
 	}
 
 	/**
-	* Add merge tag drop down text and icon above element.
+	* Add merge tag drop down icon next to element.
 	*/
 	self.addMergeTagIcon = function() {
 
 		var inputType     = self.elem.is( 'input' ) ? 'input' : 'textarea',
 		    positionClass = self.getClassProperty( self.elem, 'position' );
 
-		self.mergeTagIcon  = jQuery( '<span class="all-merge-tags ' + positionClass + ' ' + inputType + '"><button class="open-list tooltip-merge-tag gform-button gform-button--unstyled" title="' + gf_vars.mergeTagsText + '"><i class="gform-icon gform-icon--merge-tag gform-button__icon"></i>' + gf_vars.mergeTagsText + '</button></span>' );
+		self.mergeTagIcon  = jQuery( '<span class="all-merge-tags ' + positionClass + ' ' + inputType + '"><a class="open-list tooltip-merge-tag" title="' + gf_vars.mergeTagsTooltip + '"></a></span>' );
 
 		// Add the target element to the merge tag icon data for reference later when determining where the selected merge tag should be inserted.
 		self.mergeTagIcon.data( 'targetElement', self.elem.attr( 'id' ) );
@@ -1101,15 +1080,24 @@ var gfMergeTagsObj = function( form, element ) {
 		// If "mt-manual_position" class prop is set, look for manual elem with correct class.
 		if ( self.getClassProperty( self.elem, 'manual_position' ) ) {
 
-            // Make sure we only do this on the mergetag button for this field.
-			var id = self.elem.attr( 'id' ).substring( 1, self.elem.attr( 'id' ).length );
-			jQuery( '#' + id ).find( '.gform-tinymce-mergetag-button' ).append( self.mergeTagIcon );
+			var manualClass = '.mt-' + self.elem.attr('id');
+
+			jQuery( manualClass ).append( self.mergeTagIcon );
 
 		} else {
 
 			self.elem.after( self.mergeTagIcon );
 
 		}
+
+		self.mergeTagIcon.find( '.tooltip-merge-tag' ).tooltip( {
+			show:    { delay:1250 },
+            position: {
+                my: 'center bottom',
+                at: 'center-3 top-10'
+            },
+			content: function () { return jQuery( this ).prop( 'title' ); }
+		} );
 
 	}
 
@@ -1118,7 +1106,7 @@ var gfMergeTagsObj = function( form, element ) {
 	*/
 	self.bindMergeTagListClick = function( event ) {
 
-        self.mergeTagList.hide();
+		self.mergeTagList.hide();
 
 		var value = jQuery( event.target ).data('value');
 		var input = self.getTargetElement( event.target );
@@ -1503,7 +1491,7 @@ var gfMergeTagsObj = function( form, element ) {
 				var tagHTML = jQuery( '<a class="" data-value="' + escapeAttr( tag.tag ) + '">' + escapeHtml( label ) + '</a>' );
 				tagHTML.on( 'click.gravityforms', self.bindMergeTagListClick );
 
-                optionsHTML.push( jQuery( '<li></li>' ).html( tagHTML ) );
+				optionsHTML.push( jQuery( '<li></li>' ).html( tagHTML ) );
 
 			}
 
@@ -1816,7 +1804,7 @@ var gform = window.gform || {};
  * Components namespace to house scripts associated with our new 2.5 and up components
  */
 
-gform.components = gform.components || {};
+gform.components = {};
 
 /**
  * @function gform.components.dropdown
@@ -1850,7 +1838,6 @@ gform.components.dropdown = function( options ) {
     };
 
     this.options = gform.tools.mergeObjects( this.options, gform.tools.defaultFor( options, {} ) );
-
     this.el = gform.tools.getNodes( this.options.selector, false, this.options.container )[ 0 ];
     if ( ! this.el ) {
         gform.console.error( 'Gform dropdown couldn\'t find [data-js="' + this.options.selector + '"] to instantiate on.');
@@ -2298,4 +2285,3 @@ gform.simplebar = {
 };
 
 gform.initializeOnLoaded( gform.simplebar.init );
-

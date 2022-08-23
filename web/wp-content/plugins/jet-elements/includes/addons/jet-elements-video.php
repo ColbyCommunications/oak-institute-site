@@ -1897,6 +1897,10 @@ class Jet_Elements_Video extends Jet_Elements_Base {
 		foreach ( array( 'autoplay', 'loop', 'controls' ) as $param_name ) {
 			if ( filter_var( $settings[ $param_name ], FILTER_VALIDATE_BOOLEAN ) ) {
 				$params[ $param_name ] = '';
+
+				if ( 'autoplay' === $param_name ) {
+					$params[ 'playsinline' ] = '';
+				}
 			}
 		}
 

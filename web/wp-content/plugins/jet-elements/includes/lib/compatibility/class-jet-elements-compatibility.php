@@ -33,9 +33,7 @@ if ( ! class_exists( 'Jet_Elements_Compatibility' ) ) {
 			// WPML String Translation plugin exist check
 			if ( defined( 'WPML_ST_VERSION' ) ) {
 
-				if ( class_exists( 'WPML_Elementor_Module_With_Items' ) ) {
-					$this->load_wpml_modules();
-				}
+				add_action( 'init', array( $this, 'load_wpml_modules' ) );
 
 				add_filter( 'wpml_elementor_widgets_to_translate', array( $this, 'add_translatable_nodes' ) );
 				add_filter( 'jet-elements/widgets/template_id',    array( $this, 'set_wpml_translated_template_id' ) );
@@ -68,6 +66,11 @@ if ( ! class_exists( 'Jet_Elements_Compatibility' ) ) {
 		 * @return void
 		 */
 		public function load_wpml_modules() {
+
+			if ( ! class_exists( 'WPML_Elementor_Module_With_Items' ) ) {
+				return;
+			}
+
 			require jet_elements()->plugin_path( 'includes/lib/compatibility/modules/class-wpml-jet-elements-advanced-carousel.php' );
 			require jet_elements()->plugin_path( 'includes/lib/compatibility/modules/class-wpml-jet-elements-map.php' );
 			require jet_elements()->plugin_path( 'includes/lib/compatibility/modules/class-wpml-jet-elements-animated-text.php' );

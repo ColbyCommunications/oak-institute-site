@@ -3,6 +3,16 @@
 Brand new addon for Elementor Page builder. It provides the set of modules to create different kinds of content, adds custom modules to your website and applies attractive styles in the matter of several clicks!
 
 # ChangeLog
+## [2.6.2](https://github.com/ZemezLab/jet-elements/archive/2.6.2.zip) - 27.01.2022
+* Added: [Crocoblock/suggestions#3657](https://github.com/Crocoblock/suggestions/issues/3657)
+* Added: [Crocoblock/suggestions#3760](https://github.com/Crocoblock/suggestions/issues/3760)
+* Added: [Crocoblock/suggestions#4465](https://github.com/Crocoblock/suggestions/issues/4465)
+* Added: [Crocoblock/suggestions#3646](https://github.com/Crocoblock/suggestions/issues/3646)
+* Added: [Crocoblock/suggestions#1754](https://github.com/Crocoblock/suggestions/issues/1754)
+* Fixed: WPML compatibility
+* Fixed: compatibility template library with Elementor 3.5
+* Fixed: minor issues
+
 ## [2.6.1](https://github.com/ZemezLab/jet-elements/archive/2.6.1.zip) - 19.11.2021
 * Fixed: js error in the Slider widget
 

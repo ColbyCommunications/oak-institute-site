@@ -103,7 +103,7 @@ class Jet_Elements_Advanced_Map extends Jet_Elements_Base {
 			'map_center_lat_lng',
 			array(
 				'label'       => esc_html__( 'Map Center Coordinates', 'jet-elements' ),
-				'description' => esc_html__( 'To get an address from latitude and longitude coordinates from one meta field, combine coordinates names with the ";" sign. For example lat;lng. Where latitude always goes first. The latitude value range is from -90 to 90. The longitude value outside range is from -180 to 180.', 'jet-elements' ),
+				'description' => esc_html__( 'To get an address from latitude and longitude coordinates from one meta field, combine coordinates names with the ";" sign. For example 51.503399;-0.119519. Where latitude always goes first. The latitude value range is from -90 to 90. The longitude value outside range is from -180 to 180.', 'jet-elements' ),
 				'type'        => Controls_Manager::TEXT,
 				'placeholder' => $default_lat_long,
 				'default'     => $default_lat_long,

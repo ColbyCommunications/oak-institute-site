@@ -54,8 +54,8 @@ class Jet_Posts_Shortcode extends Jet_Elements_Shortcode_Base {
 				'frontend_available' => true,
 				'render_type'        => 'template',
 				'selectors'   => array(
-					'{{WRAPPER}} .jet-posts__item' => 'max-width: calc( 100% / {{VALUE}} );flex: 0 0 calc( 100% / {{VALUE}} ); -webkit-box-flex: 0;
-					-ms-flex: 0 0 calc( 100% / {{VALUE}} );',
+					'{{WRAPPER}} .jet-posts .jet-posts__item' => 'max-width: calc( 100% / {{VALUE}} );',
+					'{{WRAPPER}} .jet-posts:not(.jet-equal-cols) .jet-posts__item' => 'flex: 0 0 calc( 100% / {{VALUE}} ); -webkit-box-flex: 0;-ms-flex: 0 0 calc( 100% / {{VALUE}} );',
 				),
 			),
 			'equal_height_cols' => array(

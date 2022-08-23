@@ -854,8 +854,4 @@ class Search_Form extends Base {
 			}
 		}
 	}
-
-	public function get_group_name() {
-		return 'theme-elements';
-	}
 }

@@ -16,15 +16,6 @@ class Page_Title extends Title_Widget_Base {
 		return 'theme-page-title';
 	}
 
-	public function get_inline_css_depends() {
-		return [
-			[
-				'name' => 'heading',
-				'is_core_dependency' => true,
-			],
-		];
-	}
-
 	public function get_title() {
 		return esc_html__( 'Page Title', 'elementor-pro' );
 	}

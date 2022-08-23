@@ -239,8 +239,4 @@ class Product_Related extends Products_Base {
 	}
 
 	public function render_plain_content() {}
-
-	public function get_group_name() {
-		return 'woocommerce';
-	}
 }

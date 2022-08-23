@@ -1,5 +1,4 @@
-/*! elementor-pro - v3.6.5 - 12-04-2022 */
-"use strict";
+/*! elementor-pro - v3.5.2 - 28-11-2021 */
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["elements-handlers"],{
 
 /***/ "../assets/dev/js/frontend/elements-handlers.js":
@@ -8,6 +7,7 @@
   \******************************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -83,6 +83,7 @@ elementorProFrontend.on('elementor-pro/modules/init:before', () => {
   \********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -117,6 +118,7 @@ exports.close = close;
   \********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -124,7 +126,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
 
@@ -145,12 +147,11 @@ class IconsManager {
     }
   }
 
-  createSvgElement(name, _ref) {
-    let {
-      path,
-      width,
-      height
-    } = _ref;
+  createSvgElement(name, {
+    path,
+    width,
+    height
+  }) {
     const elementName = this.prefix + name,
           elementSelector = '#' + this.prefix + name; // Create symbol if not exist yet.
 
@@ -174,7 +175,7 @@ class IconsManager {
 
 }
 
-exports["default"] = IconsManager;
+exports.default = IconsManager;
 (0, _defineProperty2.default)(IconsManager, "symbolsContainer", void 0);
 (0, _defineProperty2.default)(IconsManager, "iconsUsageList", []);
 
@@ -186,12 +187,13 @@ exports["default"] = IconsManager;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -201,7 +203,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -211,12 +213,13 @@ exports["default"] = _default;
   \**********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -228,7 +231,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -238,12 +241,13 @@ exports["default"] = _default;
   \***********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -253,7 +257,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -263,12 +267,13 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -279,7 +284,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -289,12 +294,13 @@ exports["default"] = _default;
   \*********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -304,7 +310,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -314,12 +320,13 @@ exports["default"] = _default;
   \*********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -329,7 +336,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -339,12 +346,13 @@ exports["default"] = _default;
   \********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -354,7 +362,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -364,12 +372,13 @@ exports["default"] = _default;
   \**********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -391,7 +400,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -401,6 +410,7 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -408,7 +418,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _triggers = _interopRequireDefault(__webpack_require__(/*! ./triggers */ "../modules/popup/assets/js/frontend/triggers.js"));
 
@@ -665,7 +675,7 @@ class _default extends elementorModules.frontend.Document {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -675,6 +685,7 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -682,7 +693,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _document = _interopRequireDefault(__webpack_require__(/*! ./document */ "../modules/popup/assets/js/frontend/document.js"));
 
@@ -756,7 +767,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -766,6 +777,7 @@ exports["default"] = _default;
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -773,7 +785,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _pageViews = _interopRequireDefault(__webpack_require__(/*! ./timing/page-views */ "../modules/popup/assets/js/frontend/timing/page-views.js"));
 
@@ -826,7 +838,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -836,12 +848,13 @@ exports["default"] = _default;
   \**********************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor(settings, document) {
@@ -855,7 +868,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -865,6 +878,7 @@ exports["default"] = _default;
   \**************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -872,7 +886,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -893,7 +907,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -903,6 +917,7 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -910,7 +925,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -925,7 +940,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -935,6 +950,7 @@ exports["default"] = _default;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -942,7 +958,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -968,7 +984,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -978,6 +994,7 @@ exports["default"] = _default;
   \****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -985,7 +1002,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -1009,7 +1026,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1019,6 +1036,7 @@ exports["default"] = _default;
   \**************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1026,7 +1044,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -1050,7 +1068,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1060,6 +1078,7 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1067,7 +1086,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -1103,7 +1122,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1113,6 +1132,7 @@ exports["default"] = _default;
   \***********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1120,7 +1140,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -1136,7 +1156,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1146,6 +1166,7 @@ exports["default"] = _default;
   \*********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1153,7 +1174,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -1184,7 +1205,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1194,6 +1215,7 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1201,7 +1223,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _pageLoad = _interopRequireDefault(__webpack_require__(/*! ./triggers/page-load */ "../modules/popup/assets/js/frontend/triggers/page-load.js"));
 
@@ -1256,7 +1278,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1266,12 +1288,13 @@ exports["default"] = _default;
   \************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor(settings, callback) {
@@ -1285,7 +1308,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1295,6 +1318,7 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1302,13 +1326,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.checkClick = this.checkClick.bind(this);
     this.clicksCount = 0;
   }
@@ -1335,7 +1359,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1345,6 +1369,7 @@ exports["default"] = _default;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1352,13 +1377,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.detectExitIntent = this.detectExitIntent.bind(this);
   }
 
@@ -1382,7 +1407,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1392,6 +1417,7 @@ exports["default"] = _default;
   \******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1399,13 +1425,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.restartTimer = this.restartTimer.bind(this);
   }
 
@@ -1438,7 +1464,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1448,6 +1474,7 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1455,7 +1482,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
@@ -1474,7 +1501,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1484,6 +1511,7 @@ exports["default"] = _default;
   \********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1491,7 +1519,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
@@ -1520,7 +1548,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1530,6 +1558,7 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1537,13 +1566,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.checkScroll = this.checkScroll.bind(this);
     this.lastScrollOffset = 0;
   }
@@ -1584,7 +1613,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1594,12 +1623,13 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -1615,7 +1645,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1625,12 +1655,13 @@ exports["default"] = _default;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -1640,7 +1671,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1650,12 +1681,13 @@ exports["default"] = _default;
   \********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -1665,7 +1697,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1675,12 +1707,13 @@ exports["default"] = _default;
   \********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -1693,7 +1726,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1703,12 +1736,13 @@ exports["default"] = _default;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -1718,7 +1752,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1728,12 +1762,13 @@ exports["default"] = _default;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -1759,7 +1794,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1769,12 +1804,13 @@ exports["default"] = _default;
   \****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
@@ -1784,7 +1820,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1794,56 +1830,33 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor() {
     super();
     elementorFrontend.elementsHandler.attachHandler('woocommerce-menu-cart', () => __webpack_require__.e(/*! import() | woocommerce-menu-cart */ "woocommerce-menu-cart").then(__webpack_require__.bind(__webpack_require__, /*! ./handlers/menu-cart */ "../modules/woocommerce/assets/js/frontend/handlers/menu-cart.js")));
-    elementorFrontend.elementsHandler.attachHandler('woocommerce-purchase-summary', () => __webpack_require__.e(/*! import() | woocommerce-purchase-summary */ "woocommerce-purchase-summary").then(__webpack_require__.bind(__webpack_require__, /*! ./handlers/purchase-summary */ "../modules/woocommerce/assets/js/frontend/handlers/purchase-summary.js")));
     elementorFrontend.elementsHandler.attachHandler('woocommerce-checkout-page', () => __webpack_require__.e(/*! import() | woocommerce-checkout-page */ "woocommerce-checkout-page").then(__webpack_require__.bind(__webpack_require__, /*! ./handlers/checkout-page */ "../modules/woocommerce/assets/js/frontend/handlers/checkout-page.js")));
     elementorFrontend.elementsHandler.attachHandler('woocommerce-cart', () => __webpack_require__.e(/*! import() | woocommerce-cart */ "woocommerce-cart").then(__webpack_require__.bind(__webpack_require__, /*! ./handlers/cart */ "../modules/woocommerce/assets/js/frontend/handlers/cart.js")));
     elementorFrontend.elementsHandler.attachHandler('woocommerce-my-account', () => __webpack_require__.e(/*! import() | woocommerce-my-account */ "woocommerce-my-account").then(__webpack_require__.bind(__webpack_require__, /*! ./handlers/my-account */ "../modules/woocommerce/assets/js/frontend/handlers/my-account.js")));
-    elementorFrontend.elementsHandler.attachHandler('woocommerce-notices', () => __webpack_require__.e(/*! import() | woocommerce-notices */ "woocommerce-notices").then(__webpack_require__.bind(__webpack_require__, /*! ./handlers/notices */ "../modules/woocommerce/assets/js/frontend/handlers/notices.js")));
-    /**
-     * `wc-cart` script is enqueued in the Editor by the widget `get_script_depends()`. As a result WooCommerce
-     * triggers its cart related event callbacks. One of the callbacks requires `.woocommerce-cart-form` to be in
-     * the page and reloads the Preview if it's not there. To get around this we add our own empty
-     * `.woocommerce-cart-form` to the page to stop the page reloading.
-     */
-
-    if (elementorFrontend.isEditMode()) {
-      elementorFrontend.on('components:init', () => {
-        if (!elementorFrontend.elements.$body.find('.elementor-widget-woocommerce-cart').length) {
-          elementorFrontend.elements.$body.append('<div class="woocommerce-cart-form">');
-        }
-      });
-    }
   }
 
 }
 
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "@wordpress/i18n":
-/*!**************************!*\
-  !*** external "wp.i18n" ***!
-  \**************************/
-/***/ ((module) => {
-
-module.exports = wp.i18n;
+exports.default = _default;
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ "use strict";
+/******/ 
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
 /******/ __webpack_require__.O(0, ["frontend"], () => (__webpack_exec__("../assets/dev/js/frontend/elements-handlers.js")));
 /******/ var __webpack_exports__ = __webpack_require__.O();

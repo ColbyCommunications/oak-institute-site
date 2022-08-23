@@ -28,9 +28,11 @@ $slide_id         = ! empty( $item_settings['slide_id'] ) ? 'id="' . $item_setti
 $linked_class     = '';
 $pseudo_link      = '';
 
-if ( 'true' === $item_settings['item_link'] && ! empty( $item_settings['item_link_url'] ) ) {
+if (  isset( $item_settings['item_link_url'] ) && ! empty( $item_settings['item_link_url'] ) ) {
+	$item_target = isset( $item_settings['item_link_target'] ) ? $item_settings['item_link_target'] : '';
+
 	$this->add_render_attribute( 'item_link', 'data-slide-url', $item_settings['item_link_url'] );
-	$this->add_render_attribute( 'item_link', 'data-slide-url-target',  $item_settings['item_link_target'] );
+	$this->add_render_attribute( 'item_link', 'data-slide-url-target',  $item_target );
 	$linked_class = 'jet-slider__item-linked';
 	$pseudo_link  = '<a class="jet-slider__content-item-link" href="' . $item_settings['item_link_url'] . '"></a>';
 }

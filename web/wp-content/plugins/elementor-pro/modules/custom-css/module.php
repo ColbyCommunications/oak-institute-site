@@ -139,18 +139,17 @@ class Module extends Module_Base {
 		$controls_stack->end_controls_section();
 	}
 
-	/**
-	 * @deprecated 3.1.0
-	 */
-	public function localize_settings() {
-		Plugin::elementor()->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function( __METHOD__, '3.1.0' );
+	public function localize_settings( array $settings ) {
+		$settings['i18n']['custom_css'] = esc_html__( 'Custom CSS', 'elementor-pro' );
 
-		return [];
+		return $settings;
 	}
 
 	protected function add_actions() {
 		add_action( 'elementor/element/after_section_end', [ $this, 'register_controls' ], 10, 2 );
 		add_action( 'elementor/element/parse_css', [ $this, 'add_post_css' ], 10, 2 );
 		add_action( 'elementor/css-file/post/parse', [ $this, 'add_page_settings_css' ] );
+
+		add_filter( 'elementor_pro/editor/localize_settings', [ $this, 'localize_settings' ] );
 	}
 }

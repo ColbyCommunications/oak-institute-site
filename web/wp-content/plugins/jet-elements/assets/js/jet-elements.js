@@ -44,6 +44,26 @@
 			elementor.hooks.addAction( 'frontend/element_ready/section', JetElements.elementorSection );
 		},
 
+		initElementsHandlers: function( $selector ) {
+			$selector.find( '[data-element_type]' ).each( function() {
+				var $this       = $( this ),
+					elementType = $this.data( 'element_type' );
+
+				if ( !elementType ) {
+					return;
+				}
+
+				if ( 'widget' === elementType ) {
+					elementType = $this.data( 'widget_type' );
+					window.elementorFrontend.hooks.doAction( 'frontend/element_ready/widget', $this, $ );
+				}
+
+				window.elementorFrontend.hooks.doAction( 'frontend/element_ready/global', $this, $ );
+				window.elementorFrontend.hooks.doAction( 'frontend/element_ready/' + elementType, $this, $ );
+
+			} );
+		},
+
 		widgetCountdown: function( $scope ) {
 
 			var timeInterval,
@@ -1364,7 +1384,6 @@
 				fade: settings['sliderFadeMode'],
 				slideDistance: ( 'string' !== typeof settings['slideDistance']['size'] ) ? settings['slideDistance']['size'] : 0,
 				slideAnimationDuration: +settings['slideDuration'],
-				//imageScaleMode: settings['imageScaleMode'],
 				imageScaleMode: 'exact',
 				waitForLayers: false,
 				grabCursor: false,
@@ -1546,6 +1565,9 @@
 				};
 
 				breakpoints = renameKeys( breakpoints, newBreakpointsKeys );
+				slidesCount = $( '> div.jet-posts__item', $target ).length;
+			} else {
+				slidesCount = $( '> div', $target ).length;
 			}
 
 			options.slidesToShow = +breakpoints.slides_to_show;
@@ -1562,10 +1584,31 @@
 				}
 			} );
 
-			slidesCount = $( '> div', $target ).length;
+			if ( options.slidesToShow >= slidesCount ) {
+				options.dots = false;
+			}
 
 			prevDeviceToShowValue   = options.slidesToShow;
 			prevDeviceToScrollValue = options.slidesToScroll;
+
+			$target.on( 'init reInit', function() {
+				if ( options.infinite ) {
+					var $items        = $( this ),
+						$clonedSlides = $( '> .slick-list > .slick-track > .slick-cloned.jet-carousel__item', $items );
+
+					if ( !$clonedSlides.length ) {
+						return;
+					}
+
+					JetElements.initElementsHandlers( $clonedSlides );
+
+				}
+			} );
+
+			if ( $target.hasClass( 'slick-initialized' ) ) {
+				$target.slick( 'refresh', true );
+				return;
+			}
 
 			Object.keys( activeBreakpoints ).reverse().forEach( function( breakpointName ) {
 
@@ -1587,8 +1630,8 @@
 						breakpointSetting.settings.slidesToScroll = breakpoints['slides_to_scroll_' + breakpointName] ? +breakpoints['slides_to_scroll_' + breakpointName] : prevDeviceToScrollValue;
 					}
 
-					$target.on( 'init reInit', function(event, slick, currentSlide, nextSlide ){
-						if ( breakpointSetting.settings.slidesToShow === slick.slideCount ) {
+					$target.on( 'init reInit', function( event, slick, currentSlide, nextSlide ) {
+						if ( breakpointSetting.settings.slidesToShow >= slick.slideCount ) {
 							breakpointSetting.settings.dots = false;
 						} else {
 							if ( dotsEnable ) {
@@ -1606,7 +1649,7 @@
 
 			options.responsive = responsive;
 
-			if ( options.slidesToShow === slidesCount ) {
+			if ( options.slidesToShow >= slidesCount ) {
 				options.dots = false;
 			}
 
@@ -1650,6 +1693,37 @@
 			if ( $target.hasClass( 'jet-table--sorting' ) ) {
 				$target.tablesorter( options );
 			}
+
+			$( '.jet-table__body-row', $target ).each( function() {
+				var _this         = $( this ),
+					itemsCounter  = 0,
+					emptyContents = 0;
+
+				$( '.jet-table__cell', _this ).each( function() {
+					var image      = $( 'img', $( this ) ),
+						svg        = $( 'svg', $( this ) ),
+						icon       = $( 'i', $( this ) ),
+						itemImages = 0;
+
+					if ( 0 === svg.length && 0 === icon.length ) {
+						image.each( function() {
+							if ( '' != $( this ).attr( 'src' ) ) {
+								itemImages++;
+							}
+						} )
+
+						if ( 0 === $( this ).text().length && 0 === itemImages ) {
+							emptyContents++;
+						}
+					}
+
+					itemsCounter++;
+				} )
+
+				if( emptyContents === itemsCounter ) {
+					_this.remove();
+				}
+			} )
 		},
 
 		widgetDropbar: function( $scope ) {
@@ -1769,6 +1843,10 @@
 						hasOverlay = false;
 					}
 				} );
+
+				if ( autoplay ) {
+					$overlay.remove();
+				}
 			}
 
 			if ( $mejsPlaer[0] ) {
@@ -1945,18 +2023,6 @@
 					'left': !isRTL ? ( firstPointLeftPos + pointWidth/2 ) : ( lastPointLeftPos + pointWidth/2 ),
 					'width': Math.abs( lastPointLeftPos - firstPointLeftPos )
 				} );
-
-				// var $progressLine   = $scope.find( '.jet-hor-timeline__line-progress' ),
-				// 	$lastActiveItem = $scope.find( '.jet-hor-timeline-list--middle .jet-hor-timeline-item.is-active:last' );
-				//
-				// if ( $lastActiveItem[0] ) {
-				// 	var $lastActiveItemPointWrap = $lastActiveItem.find( '.jet-hor-timeline-item__point' ),
-				// 		progressLineWidth        = $lastActiveItemPointWrap.position().left + $lastActiveItemPointWrap.outerWidth() - firstPointLeftPos - pointWidth / 2;
-				//
-				// 	$progressLine.css( {
-				// 		'width': progressLineWidth
-				// 	} );
-				// }
 			}
 
 			// Arrows Navigation Type
@@ -3810,7 +3876,6 @@
 			self.generateLayouts();
 
 			$window.on( 'resize.jetSectionParallax orientationchange.jetSectionParallax', JetElementsTools.debounce( 30, self.generateLayouts ) );
-			//$window.on( 'resize orientationchange', JetElementsTools.debounce( 50, self.scrollHandler ) );
 
 			if ( 0 !== scrollLayoutList.length ) {
 				$window.on( 'scroll.jetSectionParallax resize.jetSectionParallax', self.scrollHandler );
@@ -4119,9 +4184,6 @@
 				}
 
 			} );
-
-			//requesScroll = requestAnimationFrame( self.scrollUpdate );
-			//requestAnimationFrame( self.scrollUpdate );
 		};
 
 		self.mouseMoveHandler = function( event ) {
@@ -4133,7 +4195,7 @@
 				dy           = event.clientY - cy;
 
 			tiltx = -1 * ( dx / cx );
-			tilty = -1 * ( dy / cy);
+			tilty = -1 * ( dy / cy );
 
 			self.mouseMoveUpdate();
 		};
@@ -4188,11 +4250,15 @@
 
 				switch( prop ) {
 					case 'bgposition':
+
+						var bgPosX = layout.xPos + ( posX / $image[0].offsetWidth ) * 100,
+							bgPosY = layout.yPos + ( posY / $image[0].offsetHeight ) * 100;
+
 						TweenMax.to(
 							$image[0],
 							1, {
-								backgroundPositionX: 'calc(' + layout.xPos + '% + ' + posX + 'px)',
-								backgroundPositionY: 'calc(' + layout.yPos + '% + ' + posY + 'px)',
+								backgroundPositionX: bgPosX,
+								backgroundPositionY: bgPosY,
 								ease:Power2.easeOut
 							}
 						);

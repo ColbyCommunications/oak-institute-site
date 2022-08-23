@@ -1,5 +1,4 @@
-/*! elementor-pro - v3.6.5 - 12-04-2022 */
-"use strict";
+/*! elementor-pro - v3.5.2 - 28-11-2021 */
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["preloaded-elements-handlers"],{
 
 /***/ "../assets/dev/js/frontend/preloaded-elements-handlers.js":
@@ -8,6 +7,7 @@
   \****************************************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -83,6 +83,7 @@ elementorProFrontend.on('elementor-pro/modules/init:before', () => {
   \********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -117,6 +118,7 @@ exports.close = close;
   \********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -124,7 +126,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
 
@@ -145,12 +147,11 @@ class IconsManager {
     }
   }
 
-  createSvgElement(name, _ref) {
-    let {
-      path,
-      width,
-      height
-    } = _ref;
+  createSvgElement(name, {
+    path,
+    width,
+    height
+  }) {
     const elementName = this.prefix + name,
           elementSelector = '#' + this.prefix + name; // Create symbol if not exist yet.
 
@@ -174,7 +175,7 @@ class IconsManager {
 
 }
 
-exports["default"] = IconsManager;
+exports.default = IconsManager;
 (0, _defineProperty2.default)(IconsManager, "symbolsContainer", void 0);
 (0, _defineProperty2.default)(IconsManager, "iconsUsageList", []);
 
@@ -186,19 +187,20 @@ exports["default"] = IconsManager;
   \*************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 if (window.elementorCommon) {
   window.elementorCommon.helpers.softDeprecated('Scroll util from "/dev/js/frontend/utils/scroll"', '3.1.0', 'elementorModules.utils.Scroll');
 }
 
 var _default = elementorModules.utils.Scroll;
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -208,6 +210,7 @@ exports["default"] = _default;
   \**************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -215,7 +218,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _animatedHeadlines = _interopRequireDefault(__webpack_require__(/*! ./handlers/animated-headlines */ "../modules/animated-headline/assets/js/frontend/handlers/animated-headlines.js"));
 
@@ -227,7 +230,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -237,6 +240,7 @@ exports["default"] = _default;
   \**************************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -244,7 +248,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _scroll = _interopRequireDefault(__webpack_require__(/*! elementor-pro/frontend/utils/scroll */ "../assets/dev/js/frontend/utils/scroll.js"));
 
@@ -550,7 +554,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -560,6 +564,7 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -567,7 +572,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _mediaCarousel = _interopRequireDefault(__webpack_require__(/*! ./handlers/media-carousel */ "../modules/carousel/assets/js/frontend/handlers/media-carousel.js"));
 
@@ -583,7 +588,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -593,12 +598,13 @@ exports["default"] = _default;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class CarouselBase extends elementorModules.frontend.handlers.SwiperBase {
   getDefaultSettings() {
@@ -871,7 +877,7 @@ class CarouselBase extends elementorModules.frontend.handlers.SwiperBase {
 
 }
 
-exports["default"] = CarouselBase;
+exports.default = CarouselBase;
 
 /***/ }),
 
@@ -881,6 +887,7 @@ exports["default"] = CarouselBase;
   \*************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -888,7 +895,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/carousel/assets/js/frontend/handlers/base.js"));
 
@@ -897,8 +904,8 @@ class MediaCarousel extends _base.default {
     return 'slideshow' === this.getElementSettings('skin');
   }
 
-  getDefaultSettings() {
-    const defaultSettings = super.getDefaultSettings(...arguments);
+  getDefaultSettings(...args) {
+    const defaultSettings = super.getDefaultSettings(...args);
 
     if (this.isSlideshow()) {
       defaultSettings.selectors.thumbsSwiper = '.elementor-thumbnails-swiper';
@@ -936,9 +943,9 @@ class MediaCarousel extends _base.default {
     return super.getElementSettings(setting);
   }
 
-  getDefaultElements() {
+  getDefaultElements(...args) {
     const selectors = this.getSettings('selectors'),
-          defaultElements = super.getDefaultElements(...arguments);
+          defaultElements = super.getDefaultElements(...args);
 
     if (this.isSlideshow()) {
       defaultElements.$thumbsSwiper = this.$element.find(selectors.thumbsSwiper);
@@ -1018,7 +1025,7 @@ class MediaCarousel extends _base.default {
 
 }
 
-exports["default"] = MediaCarousel;
+exports.default = MediaCarousel;
 
 /***/ }),
 
@@ -1028,6 +1035,7 @@ exports["default"] = MediaCarousel;
   \*******************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1035,7 +1043,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/carousel/assets/js/frontend/handlers/base.js"));
 
@@ -1062,7 +1070,7 @@ class TestimonialCarousel extends _base.default {
 
 }
 
-exports["default"] = TestimonialCarousel;
+exports.default = TestimonialCarousel;
 
 /***/ }),
 
@@ -1072,6 +1080,7 @@ exports["default"] = TestimonialCarousel;
   \******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1079,7 +1088,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _countdown = _interopRequireDefault(__webpack_require__(/*! ./handlers/countdown */ "../modules/countdown/assets/js/frontend/handlers/countdown.js"));
 
@@ -1091,7 +1100,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1101,12 +1110,13 @@ exports["default"] = _default;
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   cache: null,
@@ -1258,7 +1268,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1268,6 +1278,7 @@ exports["default"] = _default;
   \**************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1275,7 +1286,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _formSteps = _interopRequireDefault(__webpack_require__(/*! ./handlers/form-steps */ "../modules/forms/assets/js/frontend/handlers/form-steps.js"));
 
@@ -1299,7 +1310,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1309,12 +1320,13 @@ exports["default"] = _default;
   \***********************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class DataTimeFieldBase extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -1350,14 +1362,14 @@ class DataTimeFieldBase extends elementorModules.frontend.handlers.Base {
     element.flatpickr(this.getPickerOptions(element));
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
     this.elements.$fields.each((index, element) => this.addPicker(element));
   }
 
 }
 
-exports["default"] = DataTimeFieldBase;
+exports.default = DataTimeFieldBase;
 
 /***/ }),
 
@@ -1367,6 +1379,7 @@ exports["default"] = DataTimeFieldBase;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1374,7 +1387,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _dataTimeFieldBase = _interopRequireDefault(__webpack_require__(/*! ./data-time-field-base */ "../modules/forms/assets/js/frontend/handlers/fields/data-time-field-base.js"));
 
@@ -1394,7 +1407,7 @@ class DateField extends _dataTimeFieldBase.default {
 
 }
 
-exports["default"] = DateField;
+exports.default = DateField;
 
 /***/ }),
 
@@ -1404,6 +1417,7 @@ exports["default"] = DateField;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -1411,7 +1425,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _dataTimeFieldBase = _interopRequireDefault(__webpack_require__(/*! ./data-time-field-base */ "../modules/forms/assets/js/frontend/handlers/fields/data-time-field-base.js"));
 
@@ -1430,7 +1444,7 @@ class TimeField extends _dataTimeFieldBase.default {
 
 }
 
-exports["default"] = TimeField;
+exports.default = TimeField;
 
 /***/ }),
 
@@ -1440,12 +1454,13 @@ exports["default"] = TimeField;
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   getDefaultSettings() {
@@ -1475,7 +1490,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1485,12 +1500,13 @@ exports["default"] = _default;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   getDefaultSettings() {
@@ -1620,7 +1636,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1630,12 +1646,13 @@ exports["default"] = _default;
   \******************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class FormSteps extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -1700,8 +1717,8 @@ class FormSteps extends elementorModules.frontend.handlers.Base {
     return elements;
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
 
     if (!this.isStepsExist()) {
       return;
@@ -2033,7 +2050,9 @@ class FormSteps extends elementorModules.frontend.handlers.Base {
   extractResponsiveSizeFromSubmitWrapper() {
     let sizeClasses = [];
     this.elements.$submitWrapper.removeClass((index, className) => {
-      sizeClasses = className.match(/elementor-(sm|md)-[0-9]+/g)?.join(' ');
+      var _className$match;
+
+      sizeClasses = (_className$match = className.match(/elementor-(sm|md)-[0-9]+/g)) === null || _className$match === void 0 ? void 0 : _className$match.join(' ');
       return sizeClasses;
     });
     this.elements.$buttonsContainer.addClass(sizeClasses);
@@ -2267,7 +2286,7 @@ class FormSteps extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = FormSteps;
+exports.default = FormSteps;
 
 /***/ }),
 
@@ -2277,12 +2296,13 @@ exports["default"] = FormSteps;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class Recaptcha extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -2375,7 +2395,7 @@ class Recaptcha extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = Recaptcha;
+exports.default = Recaptcha;
 
 /***/ }),
 
@@ -2385,6 +2405,7 @@ exports["default"] = Recaptcha;
   \****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -2392,7 +2413,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _handler = _interopRequireDefault(__webpack_require__(/*! ./handler */ "../modules/gallery/assets/js/frontend/handler.js"));
 
@@ -2404,7 +2425,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -2414,12 +2435,13 @@ exports["default"] = _default;
   \********************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class galleryHandler extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -2467,13 +2489,13 @@ class galleryHandler extends elementorModules.frontend.handlers.Base {
           horizontalGap: elementorFrontend.getDeviceSetting(breakpoint, settings, 'gap').size,
           verticalGap: elementorFrontend.getDeviceSetting(breakpoint, settings, 'gap').size,
           columns: elementorFrontend.getDeviceSetting(breakpoint, settings, 'columns'),
-          idealRowHeight: idealRowHeight?.size
+          idealRowHeight: idealRowHeight === null || idealRowHeight === void 0 ? void 0 : idealRowHeight.size
         };
       }
     });
     return {
       type: settings.gallery_layout,
-      idealRowHeight: desktopIdealRowHeight?.size,
+      idealRowHeight: desktopIdealRowHeight === null || desktopIdealRowHeight === void 0 ? void 0 : desktopIdealRowHeight.size,
       container: this.elements.$container,
       columns: settings.columns,
       aspectRatio: settings.aspect_ratio,
@@ -2578,9 +2600,7 @@ class galleryHandler extends elementorModules.frontend.handlers.Base {
     setTimeout(updateLightboxGroup, 1000);
   }
 
-  setLightboxGalleryIndex() {
-    let index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'all';
-
+  setLightboxGalleryIndex(index = 'all') {
     if ('all' === index) {
       return this.elements.$items.attr('data-elementor-lightbox-slideshow', 'all_' + this.getID());
     }
@@ -2588,8 +2608,8 @@ class galleryHandler extends elementorModules.frontend.handlers.Base {
     this.elements.$items.not('.e-gallery-item--hidden').attr('data-elementor-lightbox-slideshow', index + '_' + this.getID());
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
 
     if (elementorFrontend.isEditMode() && 1 <= this.$element.find('.elementor-widget-empty-icon').length) {
       this.$element.addClass('elementor-widget-empty');
@@ -2657,7 +2677,7 @@ class galleryHandler extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = galleryHandler;
+exports.default = galleryHandler;
 
 /***/ }),
 
@@ -2667,6 +2687,7 @@ exports["default"] = galleryHandler;
   \****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -2674,7 +2695,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _hotspot = _interopRequireDefault(__webpack_require__(/*! ./handlers/hotspot */ "../modules/hotspot/assets/js/frontend/handlers/hotspot.js"));
 
@@ -2686,7 +2707,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -2696,12 +2717,13 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class Hotspot extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -2796,8 +2818,8 @@ class Hotspot extends elementorModules.frontend.handlers.Base {
     }
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
     this.hotspotSequencedAnimation();
     this.setTooltipPositionControl();
 
@@ -2818,7 +2840,7 @@ class Hotspot extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = Hotspot;
+exports.default = Hotspot;
 
 /***/ }),
 
@@ -2828,6 +2850,7 @@ exports["default"] = Hotspot;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -2835,7 +2858,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _handler = _interopRequireDefault(__webpack_require__(/*! ./handler */ "../modules/lottie/assets/js/frontend/handler.js"));
 
@@ -2847,7 +2870,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -2857,12 +2880,13 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class lottieHandler extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -2894,8 +2918,8 @@ class lottieHandler extends elementorModules.frontend.handlers.Base {
     };
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
     this.lottie = null;
     this.state = {
       isAnimationScrollUpdateNeededOnFirstLoad: true,
@@ -2990,11 +3014,13 @@ class lottieHandler extends elementorModules.frontend.handlers.Base {
   }
 
   getAnimationPath() {
+    var _lottieSettings$sourc, _lottieSettings$sourc2;
+
     const lottieSettings = this.getLottieSettings();
 
-    if (lottieSettings.source_json?.url && 'json' === lottieSettings.source_json.url.toLowerCase().substr(-4)) {
+    if ((_lottieSettings$sourc = lottieSettings.source_json) !== null && _lottieSettings$sourc !== void 0 && _lottieSettings$sourc.url && 'json' === lottieSettings.source_json.url.toLowerCase().substr(-4)) {
       return lottieSettings.source_json.url;
-    } else if (lottieSettings.source_external_url?.url) {
+    } else if ((_lottieSettings$sourc2 = lottieSettings.source_external_url) !== null && _lottieSettings$sourc2 !== void 0 && _lottieSettings$sourc2.url) {
       return lottieSettings.source_external_url.url;
     } // Default animation path.
 
@@ -3032,6 +3058,8 @@ class lottieHandler extends elementorModules.frontend.handlers.Base {
   }
 
   saveInitialValues() {
+    var _lottieSettings$play_;
+
     const lottieSettings = this.getLottieSettings();
     /*
     These values of the animation are being changed during the animation runtime
@@ -3044,7 +3072,7 @@ class lottieHandler extends elementorModules.frontend.handlers.Base {
     this.state.effectsRelativeTo = lottieSettings.effects_relative_to;
     this.state.viewportOffset.start = lottieSettings.viewport ? lottieSettings.viewport.sizes.start : 0;
     this.state.viewportOffset.end = lottieSettings.viewport ? lottieSettings.viewport.sizes.end : 100;
-    this.state.animationSpeed = lottieSettings.play_speed?.size;
+    this.state.animationSpeed = (_lottieSettings$play_ = lottieSettings.play_speed) === null || _lottieSettings$play_ === void 0 ? void 0 : _lottieSettings$play_.size;
     this.state.linkTimeout = lottieSettings.link_timeout;
     this.state.caption = lottieSettings.caption;
     this.state.loop = lottieSettings.loop;
@@ -3234,9 +3262,11 @@ class lottieHandler extends elementorModules.frontend.handlers.Base {
   }
 
   setLinkTimeout() {
+    var _lottieSettings$custo;
+
     const lottieSettings = this.getLottieSettings();
 
-    if ('on_click' === lottieSettings.trigger && lottieSettings.custom_link?.url && lottieSettings.link_timeout) {
+    if ('on_click' === lottieSettings.trigger && (_lottieSettings$custo = lottieSettings.custom_link) !== null && _lottieSettings$custo !== void 0 && _lottieSettings$custo.url && lottieSettings.link_timeout) {
       this.elements.$containerLink.on('click', event => {
         event.preventDefault();
 
@@ -3427,9 +3457,11 @@ class lottieHandler extends elementorModules.frontend.handlers.Base {
   }
 
   updateLottieValues() {
+    var _lottieSettings$play_2;
+
     const lottieSettings = this.getLottieSettings(),
           valuesComparison = [{
-      sourceVal: lottieSettings.play_speed?.size,
+      sourceVal: (_lottieSettings$play_2 = lottieSettings.play_speed) === null || _lottieSettings$play_2 === void 0 ? void 0 : _lottieSettings$play_2.size,
       stateProp: 'animationSpeed',
       callback: () => this.setAnimationSpeed()
     }, {
@@ -3583,7 +3615,7 @@ class lottieHandler extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = lottieHandler;
+exports.default = lottieHandler;
 
 /***/ }),
 
@@ -3593,6 +3625,7 @@ exports["default"] = lottieHandler;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -3600,7 +3633,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _navMenu = _interopRequireDefault(__webpack_require__(/*! ./handlers/nav-menu */ "../modules/nav-menu/assets/js/frontend/handlers/nav-menu.js"));
 
@@ -3624,7 +3657,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -3634,12 +3667,13 @@ exports["default"] = _default;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   stretchElement: null,
@@ -3687,8 +3721,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
     });
   },
 
-  toggleNavLinksTabIndex() {
-    let enabled = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+  toggleNavLinksTabIndex(enabled = true) {
     this.elements.$links.attr('tabindex', enabled ? 0 : -1);
   },
 
@@ -3810,7 +3843,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -3820,6 +3853,7 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -3827,7 +3861,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _triggers = _interopRequireDefault(__webpack_require__(/*! ./triggers */ "../modules/popup/assets/js/frontend/triggers.js"));
 
@@ -4084,7 +4118,7 @@ class _default extends elementorModules.frontend.Document {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4094,6 +4128,7 @@ exports["default"] = _default;
   \**************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4101,7 +4136,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _document = _interopRequireDefault(__webpack_require__(/*! ./document */ "../modules/popup/assets/js/frontend/document.js"));
 
@@ -4177,7 +4212,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4187,12 +4222,13 @@ exports["default"] = _default;
   \********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   getDefaultSettings() {
@@ -4232,7 +4268,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4242,6 +4278,7 @@ exports["default"] = _default;
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4249,7 +4286,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _pageViews = _interopRequireDefault(__webpack_require__(/*! ./timing/page-views */ "../modules/popup/assets/js/frontend/timing/page-views.js"));
 
@@ -4302,7 +4339,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4312,12 +4349,13 @@ exports["default"] = _default;
   \**********************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor(settings, document) {
@@ -4331,7 +4369,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4341,6 +4379,7 @@ exports["default"] = _default;
   \**************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4348,7 +4387,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4369,7 +4408,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4379,6 +4418,7 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4386,7 +4426,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4401,7 +4441,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4411,6 +4451,7 @@ exports["default"] = _default;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4418,7 +4459,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4444,7 +4485,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4454,6 +4495,7 @@ exports["default"] = _default;
   \****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4461,7 +4503,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4485,7 +4527,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4495,6 +4537,7 @@ exports["default"] = _default;
   \**************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4502,7 +4545,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4526,7 +4569,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4536,6 +4579,7 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4543,7 +4587,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4579,7 +4623,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4589,6 +4633,7 @@ exports["default"] = _default;
   \***********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4596,7 +4641,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4612,7 +4657,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4622,6 +4667,7 @@ exports["default"] = _default;
   \*********************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4629,7 +4675,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/timing/base.js"));
 
@@ -4660,7 +4706,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4670,6 +4716,7 @@ exports["default"] = _default;
   \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4677,7 +4724,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _pageLoad = _interopRequireDefault(__webpack_require__(/*! ./triggers/page-load */ "../modules/popup/assets/js/frontend/triggers/page-load.js"));
 
@@ -4732,7 +4779,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4742,12 +4789,13 @@ exports["default"] = _default;
   \************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.Module {
   constructor(settings, callback) {
@@ -4761,7 +4809,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4771,6 +4819,7 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4778,13 +4827,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.checkClick = this.checkClick.bind(this);
     this.clicksCount = 0;
   }
@@ -4811,7 +4860,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4821,6 +4870,7 @@ exports["default"] = _default;
   \*******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4828,13 +4878,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.detectExitIntent = this.detectExitIntent.bind(this);
   }
 
@@ -4858,7 +4908,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4868,6 +4918,7 @@ exports["default"] = _default;
   \******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4875,13 +4926,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.restartTimer = this.restartTimer.bind(this);
   }
 
@@ -4914,7 +4965,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4924,6 +4975,7 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4931,7 +4983,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
@@ -4950,7 +5002,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -4960,6 +5012,7 @@ exports["default"] = _default;
   \********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -4967,7 +5020,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
@@ -4996,7 +5049,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5006,6 +5059,7 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -5013,13 +5067,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/popup/assets/js/frontend/triggers/base.js"));
 
 class _default extends _base.default {
-  constructor() {
-    super(...arguments);
+  constructor(...args) {
+    super(...args);
     this.checkScroll = this.checkScroll.bind(this);
     this.lastScrollOffset = 0;
   }
@@ -5060,7 +5114,7 @@ class _default extends _base.default {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5070,6 +5124,7 @@ exports["default"] = _default;
   \**************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -5077,7 +5132,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _posts = _interopRequireDefault(__webpack_require__(/*! ./handlers/posts */ "../modules/posts/assets/js/frontend/handlers/posts.js"));
 
@@ -5101,7 +5156,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5111,6 +5166,7 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -5118,7 +5174,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _posts = _interopRequireDefault(__webpack_require__(/*! ./posts */ "../modules/posts/assets/js/frontend/handlers/posts.js"));
 
@@ -5129,7 +5185,7 @@ var _default = _posts.default.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5139,12 +5195,13 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class LoadMore extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -5214,7 +5271,7 @@ class LoadMore extends elementorModules.frontend.handlers.Base {
 
     if (this.isInfinteScroll) {
       this.handleInfiniteScroll();
-    } else if (this.elements.loadMoreSpinnerWrapper && this.elements.loadMoreButton) {
+    } else if (this.elements.loadMoreSpinnerWrapper) {
       // Instead of creating 2 spinners for on-click and infinity-scroll, one spinner will be used so it should be appended to the button in on-click mode.
       this.elements.loadMoreButton.insertAdjacentElement('beforeEnd', this.elements.loadMoreSpinnerWrapper);
     } // Set the post id and element id for the ajax request.
@@ -5223,13 +5280,11 @@ class LoadMore extends elementorModules.frontend.handlers.Base {
     this.elementId = this.getID();
     this.postId = elementorFrontendConfig.post.id; // Set the current page and last page for handling the load more post and when no more posts to show.
 
-    if (this.elements.loadMoreAnchor) {
-      this.currentPage = parseInt(this.elements.loadMoreAnchor.getAttribute('data-page'));
-      this.maxPage = parseInt(this.elements.loadMoreAnchor.getAttribute('data-max-page'));
+    this.currentPage = parseInt(this.elements.loadMoreAnchor.getAttribute('data-page'));
+    this.maxPage = parseInt(this.elements.loadMoreAnchor.getAttribute('data-max-page'));
 
-      if (this.currentPage === this.maxPage || !this.currentPage) {
-        this.handleUiWhenNoPosts();
-      }
+    if (this.currentPage === this.maxPage) {
+      this.handleUiWhenNoPosts();
     }
   } // Handle load more functionality for infinity-scroll type.
 
@@ -5274,7 +5329,7 @@ class LoadMore extends elementorModules.frontend.handlers.Base {
       this.elements.loadMoreSpinner.classList.remove(this.classes.loadMoreSpin);
     }
 
-    if (this.isInfinteScroll && this.elements.loadMoreSpinnerWrapper && this.elements.loadMoreAnchor) {
+    if (this.isInfinteScroll && this.elements.loadMoreSpinnerWrapper) {
       // Since the spinner has to be shown after the new content (posts), it should be appended after the anchor element.
       this.elements.loadMoreAnchor.insertAdjacentElement('afterend', this.elements.loadMoreSpinnerWrapper);
     }
@@ -5287,9 +5342,8 @@ class LoadMore extends elementorModules.frontend.handlers.Base {
   }
 
   handleSuccessFetch(result) {
-    this.handleUiAfterLoading(); // Grabbing only the new articles from the response without the existing once (prevent posts duplication).
-
-    const posts = result.querySelectorAll(`[data-id="${this.elementId}"] .elementor-posts-container > article`);
+    this.handleUiAfterLoading();
+    const posts = result.querySelectorAll('.elementor-posts-container > article');
     const nextPageUrl = result.querySelector('.e-load-more-anchor').getAttribute('data-next-page'); // Converting HTMLCollection to an Array and iterate it.
 
     const postsHTML = [...posts].reduce((accumulator, post) => {
@@ -5320,7 +5374,7 @@ class LoadMore extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = LoadMore;
+exports.default = LoadMore;
 
 /***/ }),
 
@@ -5330,6 +5384,7 @@ exports["default"] = LoadMore;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -5337,7 +5392,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _posts = _interopRequireDefault(__webpack_require__(/*! ./posts */ "../modules/posts/assets/js/frontend/handlers/posts.js"));
 
@@ -5576,7 +5631,7 @@ var _default = _posts.default.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5586,12 +5641,13 @@ exports["default"] = _default;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   getSkinPrefix() {
@@ -5753,7 +5809,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5763,6 +5819,7 @@ exports["default"] = _default;
   \**********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -5770,7 +5827,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _shareButtons = _interopRequireDefault(__webpack_require__(/*! ./handlers/share-buttons */ "../modules/share-buttons/assets/js/frontend/handlers/share-buttons.js"));
 
@@ -5782,7 +5839,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5792,12 +5849,13 @@ exports["default"] = _default;
   \*****************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   async onInit() {
@@ -5867,7 +5925,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5877,6 +5935,7 @@ exports["default"] = _default;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -5884,7 +5943,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _slides = _interopRequireDefault(__webpack_require__(/*! ./handlers/slides */ "../modules/slides/assets/js/frontend/handlers/slides.js"));
 
@@ -5896,7 +5955,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -5906,12 +5965,13 @@ exports["default"] = _default;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class SlidesHandler extends elementorModules.frontend.handlers.SwiperBase {
   getDefaultSettings() {
@@ -6142,7 +6202,7 @@ class SlidesHandler extends elementorModules.frontend.handlers.SwiperBase {
 
 }
 
-exports["default"] = SlidesHandler;
+exports.default = SlidesHandler;
 
 /***/ }),
 
@@ -6152,6 +6212,7 @@ exports["default"] = SlidesHandler;
   \***************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6159,7 +6220,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _facebook = _interopRequireDefault(__webpack_require__(/*! ./handlers/facebook */ "../modules/social/assets/js/frontend/handlers/facebook.js"));
 
@@ -6174,7 +6235,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -6184,12 +6245,13 @@ exports["default"] = _default;
   \*****************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class FacebookHandler extends elementorModules.frontend.handlers.Base {
   getConfig() {
@@ -6230,8 +6292,8 @@ class FacebookHandler extends elementorModules.frontend.handlers.Base {
     });
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
     this.loadSDK();
     const config = this.getConfig();
 
@@ -6244,7 +6306,7 @@ class FacebookHandler extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = FacebookHandler;
+exports.default = FacebookHandler;
 
 /***/ }),
 
@@ -6254,6 +6316,7 @@ exports["default"] = FacebookHandler;
   \**************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6261,7 +6324,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _tableOfContents = _interopRequireDefault(__webpack_require__(/*! ./handlers/table-of-contents */ "../modules/table-of-contents/assets/js/frontend/handlers/table-of-contents.js"));
 
@@ -6273,7 +6336,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -6281,15 +6344,15 @@ exports["default"] = _default;
 /*!*************************************************************************************!*\
   !*** ../modules/table-of-contents/assets/js/frontend/handlers/table-of-contents.js ***!
   \*************************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
-/* provided dependency */ var __ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n")["__"];
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class TOCHandler extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -6589,7 +6652,11 @@ class TOCHandler extends elementorModules.frontend.handlers.Base {
   }
 
   handleNoHeadingsFound() {
-    let noHeadingsText = __('No headings were found on this page.', 'elementor-pro');
+    let noHeadingsText = elementorProFrontend.config.i18n.toc_no_headings_found;
+
+    if (elementorFrontend.isEditMode()) {
+      noHeadingsText = elementorPro.translate('toc_no_headings_found');
+    }
 
     return this.elements.$tocBody.html(noHeadingsText);
   }
@@ -6674,8 +6741,8 @@ class TOCHandler extends elementorModules.frontend.handlers.Base {
     this.elements.$widgetContainer.css('min-height', '0px');
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
     this.viewportItems = [];
     jQuery(() => this.run());
   }
@@ -6703,7 +6770,7 @@ class TOCHandler extends elementorModules.frontend.handlers.Base {
 
 }
 
-exports["default"] = TOCHandler;
+exports.default = TOCHandler;
 
 /***/ }),
 
@@ -6713,6 +6780,7 @@ exports["default"] = TOCHandler;
   \**********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6720,7 +6788,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _archivePostsSkinClassic = _interopRequireDefault(__webpack_require__(/*! ./handlers/archive-posts-skin-classic */ "../modules/theme-builder/assets/js/frontend/handlers/archive-posts-skin-classic.js"));
 
@@ -6752,7 +6820,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -6762,6 +6830,7 @@ exports["default"] = _default;
   \***************************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6769,13 +6838,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _loadMore = _interopRequireDefault(__webpack_require__(/*! ../../../../../posts/assets/js/frontend/handlers/load-more */ "../modules/posts/assets/js/frontend/handlers/load-more.js"));
 
 class ArchivePostsLoadMore extends _loadMore.default {}
 
-exports["default"] = ArchivePostsLoadMore;
+exports.default = ArchivePostsLoadMore;
 
 /***/ }),
 
@@ -6785,6 +6854,7 @@ exports["default"] = ArchivePostsLoadMore;
   \****************************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6792,7 +6862,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _cards = _interopRequireDefault(__webpack_require__(/*! ../../../../../posts/assets/js/frontend/handlers/cards */ "../modules/posts/assets/js/frontend/handlers/cards.js"));
 
@@ -6803,7 +6873,7 @@ var _default = _cards.default.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -6813,6 +6883,7 @@ exports["default"] = _default;
   \******************************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6820,7 +6891,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _posts = _interopRequireDefault(__webpack_require__(/*! ../../../../../posts/assets/js/frontend/handlers/posts */ "../modules/posts/assets/js/frontend/handlers/posts.js"));
 
@@ -6831,7 +6902,7 @@ var _default = _posts.default.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -6841,6 +6912,7 @@ exports["default"] = _default;
   \***********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6848,7 +6920,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _searchForm = _interopRequireDefault(__webpack_require__(/*! ./handlers/search-form */ "../modules/theme-elements/assets/js/frontend/handlers/search-form.js"));
 
@@ -6860,7 +6932,7 @@ class _default extends elementorModules.Module {
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -6870,12 +6942,13 @@ exports["default"] = _default;
   \****************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _default = elementorModules.frontend.handlers.Base.extend({
   getDefaultSettings() {
@@ -6969,7 +7042,7 @@ var _default = elementorModules.frontend.handlers.Base.extend({
 
 });
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -6979,6 +7052,7 @@ exports["default"] = _default;
   \********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -6986,11 +7060,9 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _menuCart = _interopRequireDefault(__webpack_require__(/*! ./handlers/menu-cart */ "../modules/woocommerce/assets/js/frontend/handlers/menu-cart.js"));
-
-var _purchaseSummary = _interopRequireDefault(__webpack_require__(/*! ./handlers/purchase-summary */ "../modules/woocommerce/assets/js/frontend/handlers/purchase-summary.js"));
 
 var _checkoutPage = _interopRequireDefault(__webpack_require__(/*! ./handlers/checkout-page */ "../modules/woocommerce/assets/js/frontend/handlers/checkout-page.js"));
 
@@ -6998,36 +7070,18 @@ var _cart = _interopRequireDefault(__webpack_require__(/*! ./handlers/cart */ ".
 
 var _myAccount = _interopRequireDefault(__webpack_require__(/*! ./handlers/my-account */ "../modules/woocommerce/assets/js/frontend/handlers/my-account.js"));
 
-var _notices = _interopRequireDefault(__webpack_require__(/*! ./handlers/notices */ "../modules/woocommerce/assets/js/frontend/handlers/notices.js"));
-
 class _default extends elementorModules.Module {
   constructor() {
     super();
     elementorFrontend.elementsHandler.attachHandler('woocommerce-menu-cart', _menuCart.default);
-    elementorFrontend.elementsHandler.attachHandler('woocommerce-purchase-summary', _purchaseSummary.default);
     elementorFrontend.elementsHandler.attachHandler('woocommerce-checkout-page', _checkoutPage.default);
     elementorFrontend.elementsHandler.attachHandler('woocommerce-cart', _cart.default);
     elementorFrontend.elementsHandler.attachHandler('woocommerce-my-account', _myAccount.default);
-    elementorFrontend.elementsHandler.attachHandler('woocommerce-notices', _notices.default);
-    /**
-     * `wc-cart` script is enqueued in the Editor by the widget `get_script_depends()`. As a result WooCommerce
-     * triggers its cart related event callbacks. One of the callbacks requires `.woocommerce-cart-form` to be in
-     * the page and reloads the Preview if it's not there. To get around this we add our own empty
-     * `.woocommerce-cart-form` to the page to stop the page reloading.
-     */
-
-    if (elementorFrontend.isEditMode()) {
-      elementorFrontend.on('components:init', () => {
-        if (!elementorFrontend.elements.$body.find('.elementor-widget-woocommerce-cart').length) {
-          elementorFrontend.elements.$body.append('<div class="woocommerce-cart-form">');
-        }
-      });
-    }
   }
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -7037,12 +7091,13 @@ exports["default"] = _default;
   \******************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class Base extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -7142,29 +7197,10 @@ class Base extends elementorModules.frontend.handlers.Base {
       }
     }
   }
-  /**
-   * WooCommerce prints the Purchase Note separated from the product name by a border and padding.
-   * In Elementor's Order Summary design, the product name and purchase note are displayed un-separated.
-   * To achieve this design, it is necessary to access the Product Name line before the Purchase Note line to adjust
-   * its padding. Since this cannot be achieved in CSS, it is done in this method.
-   *
-   * @param {Object} $element
-   *
-   * @return {void}
-   */
-
-
-  removePaddingBetweenPurchaseNote($element) {
-    if ($element) {
-      $element.each((index, element) => {
-        jQuery(element).prev().children('td').addClass('product-purchase-note-is-below');
-      });
-    }
-  }
 
 }
 
-exports["default"] = Base;
+exports.default = Base;
 
 /***/ }),
 
@@ -7174,6 +7210,7 @@ exports["default"] = Base;
   \******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -7181,13 +7218,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/woocommerce/assets/js/frontend/handlers/base.js"));
 
 class Cart extends _base.default {
-  getDefaultSettings() {
-    const defaultSettings = super.getDefaultSettings(...arguments);
+  getDefaultSettings(...args) {
+    const defaultSettings = super.getDefaultSettings(...args);
     return {
       selectors: { ...defaultSettings.selectors,
         shippingForm: '.shipping-calculator-form',
@@ -7202,9 +7239,9 @@ class Cart extends _base.default {
     };
   }
 
-  getDefaultElements() {
+  getDefaultElements(...args) {
     const selectors = this.getSettings('selectors');
-    return { ...super.getDefaultElements(...arguments),
+    return { ...super.getDefaultElements(...args),
       $shippingForm: this.$element.find(selectors.shippingForm),
       $stickyColumn: this.$element.find(selectors.stickyColumn),
       $hiddenInput: this.$element.find(selectors.hiddenInput)
@@ -7228,8 +7265,8 @@ class Cart extends _base.default {
     }
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
     this.toggleStickyRightColumn();
     this.hideHiddenInputsParentElements();
 
@@ -7274,8 +7311,8 @@ class Cart extends _base.default {
     }
   }
 
-  onDestroy() {
-    super.onDestroy(...arguments);
+  onDestroy(...args) {
+    super.onDestroy(...args);
     this.deactivateStickyRightColumn();
   }
 
@@ -7327,7 +7364,7 @@ class Cart extends _base.default {
 
 }
 
-exports["default"] = Cart;
+exports.default = Cart;
 
 /***/ }),
 
@@ -7337,6 +7374,7 @@ exports["default"] = Cart;
   \***************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -7344,13 +7382,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/woocommerce/assets/js/frontend/handlers/base.js"));
 
 class Checkout extends _base.default {
-  getDefaultSettings() {
-    const defaultSettings = super.getDefaultSettings(...arguments);
+  getDefaultSettings(...args) {
+    const defaultSettings = super.getDefaultSettings(...args);
     return {
       selectors: { ...defaultSettings.selectors,
         container: '.elementor-widget-woocommerce-checkout-page',
@@ -7371,9 +7409,9 @@ class Checkout extends _base.default {
     };
   }
 
-  getDefaultElements() {
+  getDefaultElements(...args) {
     const selectors = this.getSettings('selectors');
-    return { ...super.getDefaultElements(...arguments),
+    return { ...super.getDefaultElements(...args),
       $container: this.$element.find(selectors.container),
       $loginForm: this.$element.find(selectors.loginForm),
       $showCouponForm: this.$element.find(selectors.showCouponForm),
@@ -7388,8 +7426,8 @@ class Checkout extends _base.default {
     };
   }
 
-  bindEvents() {
-    super.bindEvents(...arguments);
+  bindEvents(...args) {
+    super.bindEvents(...args);
     this.elements.$showCouponForm.on('click', event => {
       event.preventDefault();
       this.elements.$couponSection.slideToggle();
@@ -7412,8 +7450,8 @@ class Checkout extends _base.default {
     });
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
     this.toggleStickyRightColumn();
     this.updateWpReferers();
     this.equalizeElementHeight(this.elements.$address); // equalize <address> boxes height
@@ -7431,8 +7469,8 @@ class Checkout extends _base.default {
     }
   }
 
-  onDestroy() {
-    super.onDestroy(...arguments);
+  onDestroy(...args) {
+    super.onDestroy(...args);
     this.deactivateStickyRightColumn();
   }
 
@@ -7506,7 +7544,6 @@ class Checkout extends _base.default {
           location.reload();
         } else {
           this.elements.$checkoutForm.before(code.message);
-          elementorFrontend.elements.$body.trigger('checkout_error', [code.message]);
         }
       }
 
@@ -7549,7 +7586,7 @@ class Checkout extends _base.default {
 
 }
 
-exports["default"] = Checkout;
+exports.default = Checkout;
 
 /***/ }),
 
@@ -7559,12 +7596,13 @@ exports["default"] = Checkout;
   \***********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 class _default extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -7575,8 +7613,7 @@ class _default extends elementorModules.frontend.handlers.Base {
         toggle: '.elementor-menu-cart__toggle',
         toggleButton: '#elementor-menu-cart__toggle_button',
         toggleWrapper: '.elementor-menu-cart__toggle_wrapper',
-        closeButton: '.elementor-menu-cart__close-button',
-        productList: '.elementor-menu-cart__products'
+        closeButton: '.elementor-menu-cart__close-button'
       },
       classes: {
         isShown: 'elementor-menu-cart--shown'
@@ -7639,7 +7676,7 @@ class _default extends elementorModules.frontend.handlers.Base {
   }
 
   bindEvents() {
-    const menuCart = elementorProFrontend.config.woocommerce.menu_cart,
+    const menuCart = elementorProFrontend.config.menu_cart,
           noQueryParams = -1 === menuCart.cart_page_url.indexOf('?'),
           currentUrl = noQueryParams ? window.location.origin + window.location.pathname : window.location.href,
           cartUrl = menuCart.cart_page_url,
@@ -7692,73 +7729,19 @@ class _default extends elementorModules.frontend.handlers.Base {
       this.hideCart();
     });
     elementorFrontend.elements.$document.on('keyup', event => {
-      const ESC_KEY = 27;
+      var ESC_KEY = 27;
 
       if (ESC_KEY === event.keyCode) {
         this.hideCart();
       }
     }); // Option to open cart on add to cart.
 
-    elementorFrontend.elements.$body.on('added_to_cart', () => this.automaticallyOpenCart()); // Govern the height of the mini-cart dropdown.
-
-    elementorFrontend.addListenerOnce(this.getUniqueHandlerID() + '_window_resize_dropdown', 'resize', () => this.governDropdownHeight());
-    elementorFrontend.elements.$body.on('wc_fragments_loaded wc_fragments_refreshed', () => this.governDropdownHeight());
-  }
-
-  unbindEvents() {
-    elementorFrontend.removeListeners(this.getUniqueHandlerID() + '_window_resize_dropdown', 'resize');
-  }
-
-  onInit() {
-    super.onInit();
-    /**
-     * When the page is reloaded after an item is added to cart, and the user activated the
-     * "Automatically Open Cart" option, the cart should open to show the updated contents.
-     */
-
-    if (elementorProFrontend.config.woocommerce.productAddedToCart) {
-      this.automaticallyOpenCart();
-    } // Govern the height of the mini-cart dropdown.
-
-
-    this.governDropdownHeight();
-  }
-
-  governDropdownHeight() {
-    const settings = this.getElementSettings(),
-          selectors = this.getSettings('selectors'); // Only do this for mini-cart.
-
-    if ('mini-cart' !== settings.cart_type) {
-      return;
-    } // Elements need to be re-instantiated every time as WooCommerce reloads the toggle button
-    // and cart contents in our widget when the cart changes e.g. adding products to the cart.
-
-
-    const $productList = this.$element.find(selectors.productList),
-          $toggle = this.$element.find(selectors.toggle); // Make sure required elements exist.
-
-    if (!$productList.length || !$toggle.length) {
-      return;
-    } // Remove max-height of productList so we can take new measurements.
-
-
-    this.$element.find(selectors.productList).css('max-height', ''); // Calculate what the height of the productList should be based on elements above, below and it's vertical position.
-
-    const windowHeight = document.documentElement.clientHeight,
-          toggleHeight = $toggle.height() + parseInt(this.elements.$main.css('margin-top')),
-          toggleTopPosition = $toggle[0].getBoundingClientRect().top,
-          productListHeight = $productList.height(),
-          dropdownWithoutViewportHeight = this.elements.$main.prop('scrollHeight') - productListHeight,
-          extraBottomSpacing = 30,
-          maxViewportHeight = windowHeight - toggleTopPosition - toggleHeight - dropdownWithoutViewportHeight - extraBottomSpacing,
-          optimalViewportHeight = Math.max(120, maxViewportHeight); // Apply max-height to the productList.
-
-    $productList.css('max-height', optimalViewportHeight);
+    elementorFrontend.elements.$body.on('added_to_cart', () => this.automaticallyOpenCart());
   }
 
 }
 
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -7768,6 +7751,7 @@ exports["default"] = _default;
   \************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
@@ -7775,7 +7759,7 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/woocommerce/assets/js/frontend/handlers/base.js"));
 
@@ -7883,6 +7867,21 @@ class MyAccountHandler extends _base.default {
       this.equalizeElementHeight(this.elements.$authForms); // equalize login/reg boxes height
     }
   }
+  /**
+   * WooCommerce prints the Purchase Note separated from the product name by a border and padding.
+   * In Elementor's Order Summary design, the product name and purchase note are displayed un-separated.
+   * To achieve this design, it is necessary to access the Product Name line before the Purchase Note line to adjust
+   * its padding. Since this cannot be achieved in CSS, it is done in this method.
+   */
+
+
+  removePaddingBetweenPurchaseNote() {
+    if (this.elements.$purchasenote) {
+      this.elements.$purchasenote.each((index, element) => {
+        jQuery(element).prev().children('td').addClass('product-purchase-note-is-below');
+      });
+    }
+  }
 
   onElementChange(propertyName) {
     // When the 'General Text' Typography or 'Section' Padding is changed, the height of the boxes need to update as well.
@@ -7891,7 +7890,7 @@ class MyAccountHandler extends _base.default {
     }
 
     if (0 === propertyName.indexOf('forms_rows_gap')) {
-      this.removePaddingBetweenPurchaseNote(this.elements.$purchasenote);
+      this.removePaddingBetweenPurchaseNote();
     }
   }
 
@@ -7904,8 +7903,8 @@ class MyAccountHandler extends _base.default {
     });
   }
 
-  onInit() {
-    super.onInit(...arguments);
+  onInit(...args) {
+    super.onInit(...args);
 
     if (this.isEdit) {
       this.editorInitTabs();
@@ -7921,185 +7920,19 @@ class MyAccountHandler extends _base.default {
 
     this.applyButtonsHoverAnimation();
     this.equalizeElementHeights();
-    this.removePaddingBetweenPurchaseNote(this.elements.$purchasenote);
+    this.removePaddingBetweenPurchaseNote();
   }
 
 }
 
-exports["default"] = MyAccountHandler;
-
-/***/ }),
-
-/***/ "../modules/woocommerce/assets/js/frontend/handlers/notices.js":
-/*!*********************************************************************!*\
-  !*** ../modules/woocommerce/assets/js/frontend/handlers/notices.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-
-class _default extends elementorModules.frontend.handlers.Base {
-  getDefaultSettings() {
-    return {
-      selectors: {
-        woocommerceNotices: '.woocommerce-NoticeGroup, :not(.woocommerce-NoticeGroup) .woocommerce-error, :not(.woocommerce-NoticeGroup) .woocommerce-message, :not(.woocommerce-NoticeGroup) .woocommerce-info',
-        noticesWrapper: '.e-woocommerce-notices-wrapper'
-      }
-    };
-  }
-
-  getDefaultElements() {
-    const selectors = this.getSettings('selectors');
-    return {
-      $documentScrollToElements: elementorFrontend.elements.$document.find('html, body'),
-      $woocommerceCheckoutForm: elementorFrontend.elements.$body.find('.form.checkout'),
-      $noticesWrapper: this.$element.find(selectors.noticesWrapper)
-    };
-  }
-
-  moveNotices() {
-    let scrollToNotices = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-    const selectors = this.getSettings('selectors');
-    let $notices = elementorFrontend.elements.$body.find(selectors.woocommerceNotices);
-
-    if (elementorFrontend.isEditMode() || elementorFrontend.isWPPreviewMode()) {
-      $notices = $notices.filter(':not(.e-notices-demo-notice)');
-    }
-
-    if (scrollToNotices) {
-      this.elements.$documentScrollToElements.stop();
-    }
-
-    this.elements.$noticesWrapper.prepend($notices);
-
-    if (!this.is_ready) {
-      this.elements.$noticesWrapper.removeClass('e-woocommerce-notices-wrapper-loading');
-      this.is_ready = true;
-    }
-
-    if (scrollToNotices) {
-      let $scrollToElement = $notices;
-
-      if (!$scrollToElement.length) {
-        $scrollToElement = this.elements.$woocommerceCheckoutForm;
-      }
-
-      if ($scrollToElement.length) {
-        // Scrolls to the notice and puts it in the middle of the window so users' attention is drawn to it.
-        this.elements.$documentScrollToElements.animate({
-          scrollTop: $scrollToElement.offset().top - document.documentElement.clientHeight / 2
-        }, 1000);
-      }
-    }
-  }
-
-  onInit() {
-    super.onInit();
-    this.is_ready = false;
-    this.moveNotices(true);
-  }
-
-  bindEvents() {
-    elementorFrontend.elements.$body.on('updated_wc_div updated_checkout updated_cart_totals applied_coupon removed_coupon applied_coupon_in_checkout removed_coupon_in_checkout checkout_error', () => this.moveNotices(true));
-  }
-
-}
-
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../modules/woocommerce/assets/js/frontend/handlers/purchase-summary.js":
-/*!******************************************************************************!*\
-  !*** ../modules/woocommerce/assets/js/frontend/handlers/purchase-summary.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-
-var _base = _interopRequireDefault(__webpack_require__(/*! ./base */ "../modules/woocommerce/assets/js/frontend/handlers/base.js"));
-
-class PurchaseSummaryHandler extends _base.default {
-  getDefaultSettings() {
-    return {
-      selectors: {
-        container: '.elementor-widget-woocommerce-purchase-summary',
-        address: 'address',
-        purchasenote: '.product-purchase-note'
-      }
-    };
-  }
-
-  getDefaultElements() {
-    const selectors = this.getSettings('selectors');
-    return {
-      $container: this.$element.find(selectors.container),
-      $address: this.$element.find(selectors.address),
-      $purchasenote: this.$element.find(selectors.purchasenote)
-    };
-  }
-
-  onElementChange(propertyName) {
-    // When the 'General Text' Typography, 'Section' Padding, or Border Width is changed, the height of the boxes need to update as well.
-    const properties = ['general_text_typography', 'sections_padding', 'sections_border_width'];
-
-    for (const property of properties) {
-      if (propertyName.startsWith(property)) {
-        this.equalizeElementHeight(this.elements.$address);
-      }
-    } // Remove padding on the purchase notes.
-
-
-    if (propertyName.startsWith('order_details_rows_gap')) {
-      this.removePaddingBetweenPurchaseNote(this.elements.$purchasenote);
-    }
-  }
-
-  applyButtonsHoverAnimation() {
-    const elementSettings = this.getElementSettings();
-
-    if (elementSettings.order_details_button_hover_animation) {
-      this.$element.find('.order-again .button, td .button').addClass('elementor-animation-' + elementSettings.order_details_button_hover_animation);
-    }
-  }
-
-  onInit() {
-    super.onInit(...arguments);
-    this.equalizeElementHeight(this.elements.$address);
-    this.removePaddingBetweenPurchaseNote(this.elements.$purchasenote);
-    this.applyButtonsHoverAnimation();
-  }
-
-}
-
-exports["default"] = PurchaseSummaryHandler;
-
-/***/ }),
-
-/***/ "@wordpress/i18n":
-/*!**************************!*\
-  !*** external "wp.i18n" ***!
-  \**************************/
-/***/ ((module) => {
-
-module.exports = wp.i18n;
+exports.default = MyAccountHandler;
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ "use strict";
+/******/ 
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
 /******/ __webpack_require__.O(0, ["frontend"], () => (__webpack_exec__("../assets/dev/js/frontend/preloaded-elements-handlers.js")));
 /******/ var __webpack_exports__ = __webpack_require__.O();

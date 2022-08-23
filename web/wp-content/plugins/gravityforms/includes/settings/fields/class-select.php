@@ -152,18 +152,13 @@ class Select extends Base {
 	 */
 	public static function get_options( $choices, $selected ) {
 
-		// Return blank if $choices is not an array.
-		if ( ! is_array( $choices ) ) {
-			return '';
-		}
-
 		$html = '';
 
 		// Loop through choices, prepare HTML.
 		foreach ( $choices as $choice ) {
 
 			// If choice has choices, render as option group.
-			if ( isset( $choice['choices'] ) ) {
+			if ( rgar( $choice, 'choices') ) {
 
 				$html .= sprintf(
 					'<optgroup label="%s">%s</optgroup>',

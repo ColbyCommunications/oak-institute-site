@@ -33,15 +33,6 @@ class Category_Image extends Widget_Image {
 		return [ 'woocommerce', 'category', 'image', 'thumbnail' ];
 	}
 
-	public function get_inline_css_depends() {
-		return [
-			[
-				'name' => 'image',
-				'is_core_dependency' => true,
-			],
-		];
-	}
-
 	protected function register_controls() {
 		parent::register_controls();
 
@@ -60,9 +51,5 @@ class Category_Image extends Widget_Image {
 
 	protected function get_html_wrapper_class() {
 		return parent::get_html_wrapper_class() . ' elementor-widget-' . parent::get_name();
-	}
-
-	public function get_group_name() {
-		return 'woocommerce';
 	}
 }

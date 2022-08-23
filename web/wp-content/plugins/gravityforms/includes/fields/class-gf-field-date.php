@@ -220,12 +220,12 @@ class GF_Field_Date extends GF_Field {
 			$picker_value = esc_attr( $value );
 		}
 
-		$format    = empty( $this->dateFormat ) ? 'mdy' : esc_attr( $this->dateFormat );
-		$date_info = GFCommon::parse_date( $value, $format, true );
+		$format                 = empty( $this->dateFormat ) ? 'mdy' : esc_attr( $this->dateFormat );
+		$date_info              = GFCommon::parse_date( $value, $format );
 
-		$day_value   = esc_attr( $date_info['day'] );
-		$month_value = esc_attr( $date_info['month'] );
-		$year_value  = esc_attr( $date_info['year'] );
+		$day_value   = esc_attr( rgget( 'day', $date_info ) );
+		$month_value = esc_attr( rgget( 'month', $date_info ) );
+		$year_value  = esc_attr( rgget( 'year', $date_info ) );
 
 		$is_entry_detail = $this->is_entry_detail();
 		$is_form_editor  = $this->is_form_editor();

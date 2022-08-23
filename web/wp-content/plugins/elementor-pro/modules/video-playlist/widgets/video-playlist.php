@@ -557,7 +557,6 @@ class Video_Playlist extends Base_Widget {
 				'frontend_available' => true,
 			]
 		);
-
 		$this->add_control(
 			'autoplay_next',
 			[
@@ -646,6 +645,7 @@ class Video_Playlist extends Base_Widget {
 				'label' => esc_html__( 'Lazy Load', 'elementor-pro' ),
 				'type' => Controls_Manager::SWITCHER,
 				'separator' => 'before',
+				'return_value' => true,
 				'frontend_available' => true,
 			]
 		);

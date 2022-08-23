@@ -229,13 +229,13 @@ class GF_License_API_Connector extends GF_API_Connector {
 	 * @return mixed
 	 */
 	public function get_plugins( $cache = true ) {
-		$plugins = $this->cache->get( 'rg_gforms_plugins', $found_in_cache );
+		$plugins = $this->cache->get( 'rg_gforms_plugins' );
 
 		if ( $this->is_debug() ) {
 			$cache = false;
 		}
 
-		if ( $found_in_cache && $cache ) {
+		if ( $plugins && $cache ) {
 			return $plugins;
 		}
 

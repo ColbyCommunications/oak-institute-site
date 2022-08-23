@@ -273,16 +273,11 @@ if ( ! class_exists( 'Jet_Elements_Ext_Section' ) ) {
 			$obj->add_control(
 				'jet_parallax_layout_list',
 				array(
-					'label'   => '<b>' . esc_html__( 'Layouts', 'jet-elements' ) . '</b>',
-					'type'    => 'jet-repeater',
-					'fields'  => $repeater->get_controls(),
-					'default' => array(
-						array(
-							'jet_parallax_layout_image' => array(
-								'url' => '',
-							),
-						)
-					),
+					'label'              => '<b>' . esc_html__( 'Layouts', 'jet-elements' ) . '</b>',
+					'type'               => 'jet-repeater',
+					'fields'             => $repeater->get_controls(),
+					'default'            => array(),
+					'prevent_empty'      => false,
 					'frontend_available' => true,
 				)
 			);

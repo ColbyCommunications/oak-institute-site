@@ -775,7 +775,7 @@ class GF_Field_Checkbox extends GF_Field {
 					$checked = "checked='checked'";
 				} elseif ( is_array( $value ) && GFFormsModel::choice_value_match( $this, $choice, rgget( $input_id, $value ) ) ) {
 					$checked = "checked='checked'";
-				} elseif ( ! is_array( $value ) && GFFormsModel::choice_value_match( $this, $choice, $value ) && ! empty( $_POST[ 'is_submit_' . $form_id ] ) ) {
+				} elseif ( ! is_array( $value ) && GFFormsModel::choice_value_match( $this, $choice, $value ) ) {
 					$checked = "checked='checked'";
 				} else {
 					$checked = '';

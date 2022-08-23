@@ -2297,6 +2297,10 @@ class Jet_Elements_Portfolio extends Jet_Elements_Base {
 		return $loop;
 	}
 
+	public function trp_edit_mode() {
+		return ! empty( $_GET['trp-edit-translation'] ) ? true : false;
+	}
+
 	/**
 	 * [render description]
 	 * @return [type] [description]

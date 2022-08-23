@@ -399,8 +399,4 @@ class Categories extends Base_Widget {
 	public function render_plain_content() {
 		echo wp_kses_post( $this->get_shortcode() );
 	}
-
-	public function get_group_name() {
-		return 'woocommerce';
-	}
 }
