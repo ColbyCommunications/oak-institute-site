@@ -169,7 +169,6 @@ if (MULTISITE) {
 }
 
 define('WP_CONTENT_URL', $strContentURL);
-define( 'GF_CACHE_DEBUG', true );
 
 // Since you can have multiple installations in one database, you need a unique
 // prefix.
