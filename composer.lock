@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "700525db7835c30ee8f8664fb5c77b57",
+    "content-hash": "26b32f56382dbc0888b943544d6642da",
     "packages": [
         {
             "name": "brick/math",
@@ -64,7 +64,7 @@
         },
         {
             "name": "colbycommunications/colby-oak-institute-theme",
-            "version": "dev-sage-10",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-oak-institute-theme",
@@ -81,6 +81,7 @@
                 "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
                 "log1x/sage-svg": "A useful SVG directive for inlining SVG's within Blade views (^1.0)."
             },
+            "default-branch": true,
             "type": "wordpress-theme",
             "extra": {
                 "acorn": {
