@@ -68,7 +68,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-oak-institute-theme",
-                "reference": "85a9c68cc068e96b3256d322ff2d330bfd8253dd"
+                "reference": "2ab5655d648d1dbb8d0d4817b6749d1d006e1d1e"
             },
             "require": {
                 "php": "^7.4|^8.0",
@@ -133,7 +133,7 @@
                 "issues": "https://github.com/roots/sage/issues",
                 "forum": "https://discourse.roots.io/"
             },
-            "time": "2022-08-23T10:08:20+00:00"
+            "time": "2022-08-23T13:54:59+00:00"
         },
         {
             "name": "colbycommunications/colby-ticket",
