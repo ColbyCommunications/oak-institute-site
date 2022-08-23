@@ -19,7 +19,7 @@
 		"colbycommunications/elementor-pro": "^3.5.2",
 		"colbycommunications/jet-elements": "^2.6.2",
 		"colbycommunications/gravityforms": "^2.5.15.13",
-		"colbycommunications/colby-ticket": "^1.0.0",
+		"colbycommunications/colby-ticket": "^1.0.1",
 		"wpackagist-plugin/wp-search-with-algolia": "^2.1.0",
 		"vlucas/phpdotenv": "^5.4",
 		"colbycommunications/colby-oak-institute-theme": "dev-sage-10"
