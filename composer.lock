@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "516f865ea1acf3ae2711d80ed2649621",
+    "content-hash": "206955f2cb8620b2d39dce5d6e38a578",
     "packages": [
         {
             "name": "colbycommunications/colby-ticket",
@@ -5549,15 +5549,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-nested-pages",
-            "version": "3.2.7",
+            "version": "3.2.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-nested-pages/",
-                "reference": "tags/3.2.7"
+                "reference": "tags/3.2.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.2.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.2.8.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
