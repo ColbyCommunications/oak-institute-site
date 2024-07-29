@@ -20,7 +20,7 @@
         "colbycommunications/colby-ticket": "^1.0.1",
         "wpackagist-plugin/wp-search-with-algolia": "2.8.1",
         "vlucas/phpdotenv": "^5.4",
-        "wpackagist-plugin/classic-editor": "^1.4",
+        "wpackagist-plugin/classic-editor": "1.6.4",
         "wpackagist-plugin/wp-nested-pages": "3.2.8",
         "wpackagist-plugin/disable-comments": "2.4.6",
         "wpackagist-theme/hello-elementor": "3.1.0"
