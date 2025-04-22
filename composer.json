@@ -23,7 +23,8 @@
         "wpackagist-plugin/classic-editor": "1.6.7",
         "wpackagist-plugin/wp-nested-pages": "3.2.10",
         "wpackagist-plugin/disable-comments": "2.4.6",
-        "wpackagist-theme/hello-elementor": "3.2.1"
+        "wpackagist-theme/hello-elementor": "3.2.1",
+        "colbycommunications/wp-all-export-pro": "1.9.4"
     },
     "authors": [
         {
